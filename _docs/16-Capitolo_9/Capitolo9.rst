@@ -3483,186 +3483,53 @@ informazioni indicate in Tabella 43.
 
 **Tabella** **43 - Parametri di re-direct verso Initiating Party**
 
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **Dato**  | **Liv**   | **Genere**| **Occ**   | **Len**   |**Contenu**|
-|           |           |           |           |           |**to**     |
-+===========+===========+===========+===========+===========+===========+
-| IMPORTO   | 1         | n         | 1..1      | 2..8      | Importo   |
-|           |           |           |           |           | espresso  |
-|           |           |           |           |           | nell’unit |
-|           |           |           |           |           | à         |
-|           |           |           |           |           | minima    |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | valuta    |
-|           |           |           |           |           | (centesim |
-|           |           |           |           |           | i         |
-|           |           |           |           |           | di euro). |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| VALUTA    | 1         | n         | 1..1      | 3         | Valuta:   |
-|           |           |           |           |           | codice    |
-|           |           |           |           |           | ISO (EUR  |
-|           |           |           |           |           | = 978).   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| NUMORD    | 1         | an        | 1..1      | 1..50     | Codice    |
-|           |           |           |           |           | Identific |
-|           |           |           |           |           | ativo     |
-|           |           |           |           |           | univoco   |
-|           |           |           |           |           | dell’ordi |
-|           |           |           |           |           | ne.       |
-|           |           |           |           |           | I         |
-|           |           |           |           |           | caratteri |
-|           |           |           |           |           | ammessi   |
-|           |           |           |           |           | sono      |
-|           |           |           |           |           | lettere,  |
-|           |           |           |           |           | cifre,    |
-|           |           |           |           |           | “-“ e     |
-|           |           |           |           |           | “_” [11]_ |
-|           |           |           |           |           | .         |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Il valore |
-|           |           |           |           |           | del campo |
-|           |           |           |           |           | è         |
-|           |           |           |           |           | generato  |
-|           |           |           |           |           | dalla     |
-|           |           |           |           |           | component |
-|           |           |           |           |           | e         |
-|           |           |           |           |           | Wrapper   |
-|           |           |           |           |           | MyBank.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| IDNEGOZIO | 1         | n         | 1..1      | 1..50     | Identific |
-|           |           |           |           |           | ativo     |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | negozio   |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | *merchant*|
-|           |           |           |           |           | da        |
-|           |           |           |           |           | fornire   |
-|           |           |           |           |           | all’*In*  |
-|           |           |           |           |           | *itiating*|
-|           |           |           |           |           | *Party* a |
-|           |           |           |           |           | cura del  |
-|           |           |           |           |           | Wrapper   |
-|           |           |           |           |           | MyBank.   |
-|           |           |           |           |           |           |
-|           |           |           |           |           | La        |
-|           |           |           |           |           | codifica  |
-|           |           |           |           |           | è         |
-|           |           |           |           |           | assegnata |
-|           |           |           |           |           | secondo   |
-|           |           |           |           |           | quanto    |
-|           |           |           |           |           | concordat |
-|           |           |           |           |           | o         |
-|           |           |           |           |           | tra AgID  |
-|           |           |           |           |           | e *Seller*|
-|           |           |           |           |           | *Bank*.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| URLBACK   | 1         | an        | 1..1      | 1..254    | URL       |
-|           |           |           |           |           | completa  |
-|           |           |           |           |           | verso la  |
-|           |           |           |           |           | quale     |
-|           |           |           |           |           | re-dirige |
-|           |           |           |           |           | re        |
-|           |           |           |           |           | il        |
-|           |           |           |           |           | browser   |
-|           |           |           |           |           | dell’util |
-|           |           |           |           |           | izzatore  |
-|           |           |           |           |           | finale    |
-|           |           |           |           |           | nel caso  |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | annullame |
-|           |           |           |           |           | nto       |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | processo  |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | pagamento |
-|           |           |           |           |           | .         |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| URLDONE   | 1         | an        | 1..1      | 1..254    | URL       |
-|           |           |           |           |           | completa  |
-|           |           |           |           |           | verso la  |
-|           |           |           |           |           | quale     |
-|           |           |           |           |           | re-dirige |
-|           |           |           |           |           | re        |
-|           |           |           |           |           | il        |
-|           |           |           |           |           | browser   |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | utilizzat |
-|           |           |           |           |           | ore       |
-|           |           |           |           |           | finale a  |
-|           |           |           |           |           | transazio |
-|           |           |           |           |           | ne        |
-|           |           |           |           |           | avvenuta  |
-|           |           |           |           |           | con       |
-|           |           |           |           |           | successo. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| URLMS     | 1         | an        | 1..1      | 1..400    | URL del   |
-|           |           |           |           |           | *merchant*|
-|           |           |           |           |           | *system*  |
-|           |           |           |           |           | verso la  |
-|           |           |           |           |           | quale     |
-|           |           |           |           |           | l’*Init*  |
-|           |           |           |           |           | *iating*  |
-|           |           |           |           |           | *Party*   |
-|           |           |           |           |           | effettua  |
-|           |           |           |           |           | la GET o  |
-|           |           |           |           |           | POST di   |
-|           |           |           |           |           | comunicaz |
-|           |           |           |           |           | ione      |
-|           |           |           |           |           | dell’esit |
-|           |           |           |           |           | o         |
-|           |           |           |           |           | dell’oper |
-|           |           |           |           |           | azione    |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | pagamento |
-|           |           |           |           |           | ,         |
-|           |           |           |           |           | sia essa  |
-|           |           |           |           |           | positiva  |
-|           |           |           |           |           | o         |
-|           |           |           |           |           | negativa. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| MAC       | 1         | an        | 1..1      | 40        |*Message*  |
-|           |           |           |           |           |*Authentic*|
-|           |           |           |           |           |*ation*    |
-|           |           |           |           |           |*Code*:    |
-|           |           |           |           |           |rende      |
-|           |           |           |           |           |immodific  |
-|           |           |           |           |           |abile      |
-|           |           |           |           |           |da parte   |
-|           |           |           |           |           |dell'util  |
-|           |           |           |           |           |izzatore   |
-|           |           |           |           |           |finale i   |
-|           |           |           |           |           |dati       |
-|           |           |           |           |           |dell'ordi  |
-|           |           |           |           |           |ne.        |
-|           |           |           |           |           |           |
-|           |           |           |           |           |Per il     |
-|           |           |           |           |           |calcolo    |
-|           |           |           |           |           |vedi §     |
-|           |           |           |           |           |9.4.5.1.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| DESCRORD  | 1         | an        | 1..1      | 25..140   | Descrizio |
-|           |           |           |           |           | ne        |
-|           |           |           |           |           | dell'ordi |
-|           |           |           |           |           | ne,       |
-|           |           |           |           |           | nonché    |
-|           |           |           |           |           | causale   |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | pagamento |
-|           |           |           |           |           | .         |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| IDVS      | 1         | n         | 1..1      | 1..35     | Identific |
-|           |           |           |           |           | ativo     |
-|           |           |           |           |           | *validati*|
-|           |           |           |           |           | *on*      |
-|           |           |           |           |           | *service*:|
-|           |           |           |           |           | corrispon |
-|           |           |           |           |           | de        |
-|           |           |           |           |           | al codice |
-|           |           |           |           |           | MyBank    |
-|           |           |           |           |           | “Particip |
-|           |           |           |           |           | ant       |
-|           |           |           |           |           | ID”.      |
-+-----------+-----------+-----------+-----------+-----------+-----------+
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| **Dato**  | **Liv** | **Genere** | **Occ** | **Len** | **Contenuto**                                           |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| IMPORTO   | 1       | n          | 1..1    | 2..8    | Importo espresso nell’unità minima della valuta         |
+|           |         |            |         |         | (centesimi di euro).                                    |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| VALUTA    | 1       | n          | 1..1    | 3       | Valuta: codice ISO (EUR = 978).                         |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| NUMORD    | 1       | an         | 1..1    | 1..50   | Codice Identificativo                                   |
+|           |         |            |         |         | univoco dell’ordine. I caratteri ammessi sono lettere,  |
+|           |         |            |         |         | cifre, “-“ e “_” [11]_                                  |
+|           |         |            |         |         |                                                         |
+|           |         |            |         |         | Il valore del campo è generato dalla componente         |
+|           |         |            |         |         | Wrapper MyBank.                                         |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| IDNEGOZIO | 1       | n          | 1..1    | 1..50   | Identificativo del negozio del merchant da              |
+|           |         |            |         |         | fornire all’Initiating Party a cura del                 |
+|           |         |            |         |         | Wrapper MyBank.                                         |
+|           |         |            |         |         | La codifica è assegnata secondo quanto                  |
+|           |         |            |         |         | concordato  tra AgID e Seller Bank.                     |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| URLBACK   | 1       | an         | 1..1    | 1..254  | URL completa verso la quale re-dirigere il              |
+|           |         |            |         |         | browser dell’utilizzatore finale nel caso di            |
+|           |         |            |         |         | annullamento del processo di pagamento.                 |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| URLDONE   | 1       | an         | 1..1    | 1..254  | URL completa verso la quale re-dirigere il              |
+|           |         |            |         |         | browser del utilizzatore finale a transazione           |
+|           |         |            |         |         | avvenuta con successo.                                  |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| URLMS     | 1       | n          | 1..1    | 1..400  | URL del merchant system verso la quale                  |
+|           |         |            |         |         | l’Initiating Party effettua la GET o POST               |
+|           |         |            |         |         | di comunicazione dell’esito dell’operazione             |
+|           |         |            |         |         | di pagamento, sia essa positiva o negativa.             |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| MAC       | 1       | an         | 1..1    | 40      | Message Authentication Code:                            |
+|           |         |            |         |         | rende immodificabile da parte dell'utilizzatore         |
+|           |         |            |         |         | finale i dati dell'ordine.                              |
+|           |         |            |         |         |                                                         |
+|           |         |            |         |         | Per il calcolo vedi § 9.4.5.1                           |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| DESCRORD  | 1       | an         | 1..1    | 25..140 | Descrizione dell'ordine, nonché causale del             |
+|           |         |            |         |         | pagamento.                                              |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+| IDVS      | 1       | n          | 1..1    | 1..35   | Identificativo *validation* service:                    |
+|           |         |            |         |         | corrisponde al codice MyBank “ParticipantID”.           |
++-----------+---------+------------+---------+---------+---------------------------------------------------------+
+
 
 Stringhe URL utilizzate per la "redirect".
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
