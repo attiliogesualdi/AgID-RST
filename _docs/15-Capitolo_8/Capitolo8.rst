@@ -3384,49 +3384,26 @@ Tabella 36:
 
 **Tabella** **36 - Parametri di re-direzione verso Web-FESP**
 
-+-----------------------+-----------------------+-----------------------+
-| **Parametri**         |     **Descrizione**   |                       |
-+=======================+=======================+=======================+
-| **URL**               | è la stringa fornita  |                       |
-|                       | all'Ente Creditore    |                       |
-|                       | dal NodoSPC nella     |                       |
-|                       | *response* della      |                       |
-|                       | primitiva             |                       |
-|                       | nodoInviaRPT. La      |                       |
-|                       | stringa è così        |                       |
-|                       | composta:             |                       |
-|                       |                       |                       |
-|                       | <URL> =               |                       |
-|                       | "<urlWeb-FESP>?idSess |                       |
-|                       | ion=<idSession>"      |                       |
-+-----------------------+-----------------------+-----------------------+
-|                       | dove:                 | è lo URL della        |
-|                       |                       | componente Web-FESP   |
-|                       | <urlWeb-FESP>         | del Nodo dei          |
-|                       |                       | Pagamenti-SPC         |
-|                       | <idSession>           |                       |
-|                       |                       | è generato dal        |
-|                       |                       | NodoSPC e identifica  |
-|                       |                       | in modo univoco       |
-|                       |                       | l’operazione di       |
-|                       |                       | re-indirizzamento     |
-|                       |                       | relativa alla RPT     |
-|                       |                       | della primitiva       |
-|                       |                       | **nodoInviaRPT**,     |
-|                       |                       | nel caso alla         |
-|                       |                       | primitiva             |
-|                       |                       | **nodoInviaCarrelloR**|
-|                       |                       | **PT**                |
-|                       |                       | può essere trascurato |
-+-----------------------+-----------------------+-----------------------+
-| **lang** (opzionale)  | specifica il          |                       |
-|                       | linguaggio scelto     |                       |
-|                       | dall'utilizzatore     |                       |
-|                       | finale sul Portale    |                       |
-|                       | dell'Ente Creditore,  |                       |
-|                       | secondo la codifica   |                       |
-|                       | standard ISO 693-3.   |                       |
-+-----------------------+-----------------------+-----------------------+
++-----------------------+--------------------------------------------------------------------------------------------+
+| **Parametri**         |     **Descrizione**                                                                        |
++=======================+============================================================================================+
+| **URL**               | è la stringa fornita all'Ente Creditore dal NodoSPC nella *response* della                 |
+|                       | primitiva nodoInviaRPT. La stringa è così composta:                                        |
+|                       | <URL> = "<urlWeb-FESP>?idSession=<idSession>"                                              |
+|                       |                                                                                            |
+|                       |                                                                                            |
+|                       | dove:                                                                                      |
+|                       |                                                                                            |
+|                       | - <urlWeb-FESP> è lo URL della componente Web-FESP del Nodo dei Pagamenti-SPC              |
+|                       |                                                                                            |
+|                       |                                                                                            |
+|                       | - <idSession> è generato dal NodoSPC e identifica in modo univoco l’operazione di          |
+|                       |               re-indirizzamento relativa alla RPT della primitiva nodoInviaRPT,            |
+|                       |               nel caso alla primitiva nodoInviaCarrelloRPT può essere trascurato           |
++-----------------------+--------------------------------------------------------------------------------------------+
+| **lang** (opzionale)  | specifica il linguaggio scelto dall'utilizzatore finale sul Portale dell'Ente Creditore,   |
+|                       | secondo la codifica standard ISO 693-3.                                                    |
++-----------------------+--------------------------------------------------------------------------------------------+
 
 Re-direzione dal Web-FESP verso il Portale EC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
