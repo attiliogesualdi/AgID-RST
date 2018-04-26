@@ -3589,147 +3589,63 @@ informazioni di Tabella 44.
 
 **Tabella** **44 - Parametri del messaggio di esito pagamento da Initiating Party**
 
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **Dato**  | **Liv**   | **Genere**| **Occ**   | **Len**   |**Contenu**|
-|           |           |           |           |           |**to**     |
-+===========+===========+===========+===========+===========+===========+
-| NUMORD    | 1         | an        | 1..1      | 1..50     | Deve      |
-|           |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di avvio. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| IDNEGOZIO | 1         | n         | 1..1      | 1..50     | Deve      |
-|           |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di avvio. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| AUT       | 1         | an        | 1..1      | 32        | Numero di |
-|           |           |           |           |           | autorizza |
-|           |           |           |           |           | zione.    |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Se        |
-|           |           |           |           |           | l’autoriz |
-|           |           |           |           |           | zazione   |
-|           |           |           |           |           | è negata, |
-|           |           |           |           |           | contiene  |
-|           |           |           |           |           | la        |
-|           |           |           |           |           | stringa   |
-|           |           |           |           |           | ‘NULL’.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| IMPORTO   | 1         | n         | 1..1      | 2..8      | Deve      |
-|           |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di avvio. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| TCONTAB   | 1         | an        | 1..1      | 1         | Tipo di   |
-|           |           |           |           |           | contabili |
-|           |           |           |           |           | zzazione  |
-|           |           |           |           |           | immediato |
-|           |           |           |           |           | .         |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Assume il |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | fisso     |
-|           |           |           |           |           | “I”.      |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| TAUTOR    | 1         | an        | 1..1      | 1         | Tipo di   |
-|           |           |           |           |           | autorizza |
-|           |           |           |           |           | zione     |
-|           |           |           |           |           | immediato |
-|           |           |           |           |           | .         |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Assume il |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | fisso     |
-|           |           |           |           |           | “I”.      |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| VALUTA    | 1         | n         | 1..1      | 3         | Deve      |
-|           |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di avvio  |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| INTRANS   | 1         | an        | 1..1      | 1..35     | Identific |
-|           |           |           |           |           | ativo     |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | transazio |
-|           |           |           |           |           | ne        |
-|           |           |           |           |           | assegnato |
-|           |           |           |           |           | dal       |
-|           |           |           |           |           | sistema.  |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| MAC       | 1         | an        | 1..1      | 40        |*Message*  |
-|           |           |           |           |           |*Authentic*|
-|           |           |           |           |           |*ation*    |
-|           |           |           |           |           |*Code*:    |
-|           |           |           |           |           |rende      |
-|           |           |           |           |           |immodific  |
-|           |           |           |           |           |abile      |
-|           |           |           |           |           |da parte   |
-|           |           |           |           |           |dell'util  |
-|           |           |           |           |           |izzatore   |
-|           |           |           |           |           |finale i   |
-|           |           |           |           |           |dati       |
-|           |           |           |           |           |dell'esit  |
-|           |           |           |           |           |o.         |
-|           |           |           |           |           |           |
-|           |           |           |           |           |Per il     |
-|           |           |           |           |           |calcolo    |
-|           |           |           |           |           |vedi §     |
-|           |           |           |           |           |9.4.5.2.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| ESITO     | 1         | n         | 1..1      | 2         | Codice    |
-|           |           |           |           |           | che       |
-|           |           |           |           |           | indica    |
-|           |           |           |           |           | l’esito   |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | transazio |
-|           |           |           |           |           | ne.       |
-|           |           |           |           |           | Vedi      |
-|           |           |           |           |           | Tabella   |
-|           |           |           |           |           | 45.       |
-+-----------+-----------+-----------+-----------+-----------+-----------+
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| **Dato**  | **Liv** | **Genere** | **Occ** | **Len** | **Contenuto**                                   |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| NUMORD    | 1       | an         | 1..1    | 1..50   | Deve contenere lo stesso valore dell’omonimo    |
+|           |         |            |         |         | campo del messaggio di avvio.                   |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| IDNEGOZIO | 1       | n          | 1..1    | 1..50   | Deve contenere lo stesso valore dell’omonimo    |
+|           |         |            |         |         | campo del messaggio di avvio.                   |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| AUT       | 1       | an         | 1..1    | 32      | Numero di autorizzazione.                       |
+|           |         |            |         |         | Se l’autorizzazione è negata,                   |
+|           |         |            |         |         | contiene la stringa ‘NULL’.                     |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| IMPORTO   | 1       | n          | 1..1    | 2..8    | Deve contenere lo stesso valore dell’omonimo    |
+|           |         |            |         |         | campo del messaggio di avvio.                   |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| TCONTAB   | 1       | an         | 1..1    | 1       | Tipo di contabilizzazione immediato.            |
+|           |         |            |         |         | Assume il valore fisso “I”.                     |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| TAUTOR    | 1       | an         | 1..1    | 1       | Tipo di autorizzazione immediato.               |
+|           |         |            |         |         | Assume il valore fisso “I”.                     |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| VALUTA    | 1       | n          | 1..1    | 3       | Deve contenere lo stesso valore dell’omonimo    |
+|           |         |            |         |         | campo del messaggio di avvio                    |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| INTRANS   | 1       | an         | 1..1    | 1..35   | Identificativo della transazione assegnato dal  |
+|           |         |            |         |         | sistema.                                        |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| MAC       | 1       | an         | 1..1    | 40      | Message Authentication Code:                    |
+|           |         |            |         |         | rende immodificabile da parte dell'utilizzatore |
+|           |         |            |         |         | finale i dati dell'esito.                       |
+|           |         |            |         |         |                                                 |
+|           |         |            |         |         | Per il calcolo vedi § 9.4.5.2                   |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
+| ESITO     | 1       | n          | 1..1    | 2       | Codice che indica l’esito della transazione.    |
+|           |         |            |         |         | Vedi Tabella 45.                                |
++-----------+---------+------------+---------+---------+-------------------------------------------------+
 
 **Tabella** **45 - Codici esito pagamento**
 
-+-----------------------------------+-----------------------------------+
-|     **Codice**                    | **Descrizione**                   |
-+===================================+===================================+
-| 00                                | OK                                |
-+-----------------------------------+-----------------------------------+
-| 01                                | Negata dal sistema                |
-+-----------------------------------+-----------------------------------+
-| 02                                | Negata per problemi               |
-|                                   | sull'anagrafica negozio           |
-+-----------------------------------+-----------------------------------+
-| 03                                | Negata per problemi di            |
-|                                   | comunicazione con i circuiti      |
-|                                   | autorizzativi                     |
-+-----------------------------------+-----------------------------------+
-| 06                                | Errore imprevisto durante         |
-|                                   | l’elaborazione della richiesta    |
-+-----------------------------------+-----------------------------------+
-| 07                                | Ordine duplicato                  |
-+-----------------------------------+-----------------------------------+
++-----------------------------------+---------------------------------------------------+
+|     **Codice**                    | **Descrizione**                                   |
++===================================+===================================================+
+| 00                                | OK                                                |
++-----------------------------------+---------------------------------------------------+
+| 01                                | Negata dal sistema                                |
++-----------------------------------+---------------------------------------------------+
+| 02                                | Negata per problemi sull'anagrafica negozio       |
++-----------------------------------+---------------------------------------------------+
+| 03                                | Negata per problemi di comunicazione con i        |
+|                                   | circuiti autorizzativi                            |
++-----------------------------------+---------------------------------------------------+
+| 06                                | Errore imprevisto durante l’elaborazione della    |
+|                                   | richiesta                                         |
++-----------------------------------+---------------------------------------------------+
+| 07                                | Ordine duplicato                                  |
++-----------------------------------+---------------------------------------------------+
 
 Il campo MAC è calcolato secondo quanto indicato al `§ 9.4.5.2 <../16-Capitolo_9/Capitolo9.rst#mac-di-confermaesito-pagamento>`_ [11]_. Il
 dato viene valorizzato con la stringa costante "*NULL*" nel caso in cui
@@ -3748,121 +3664,41 @@ autorizzazione ad esso legate.
 **Tabella** **46 - Parametri di messaggio di Richiesta situazione ordine**
 **verso Initiating Party**
 
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **Dato**  | **Liv**   | **Genere**| **Occ**   | **Len**   |**Contenu**|
-|           |           |           |           |           |**to**     |
-+===========+===========+===========+===========+===========+===========+
-| OPERAZIONE| 1         | an        | 1..1      | 16        | Operazion |
-|           |           |           |           |           | e         |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | .         |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Contiene  |
-|           |           |           |           |           | la        |
-|           |           |           |           |           | stringa   |
-|           |           |           |           |           | "SITUAZIO |
-|           |           |           |           |           | NEORDINE" |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| TIMESTAMP | 1         | n         | 1..1      | 23        |*Timestamp*|
-|           |           |           |           |           | locale.   |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Formato   |
-|           |           |           |           |           | yyyy-MM-d |
-|           |           |           |           |           | dTHH:mm:s |
-|           |           |           |           |           | s.SSS     |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| IDNEGOZIO | 1         | n         | 1..1      | 1..50     |Identific  |
-|           |           |           |           |           |ativo      |
-|           |           |           |           |           |del        |
-|           |           |           |           |           |negozio    |
-|           |           |           |           |           |del        |
-|           |           |           |           |           |*merchant*.|
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| OPERATORE | 1         | an        | 1..1      | 8         | Indica    |
-|           |           |           |           |           | chi ha    |
-|           |           |           |           |           | richiesto |
-|           |           |           |           |           | l’operazi |
-|           |           |           |           |           | one.      |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Contiene  |
-|           |           |           |           |           | la User   |
-|           |           |           |           |           | ID di un  |
-|           |           |           |           |           | operatore |
-|           |           |           |           |           | assegnato |
-|           |           |           |           |           | dall’*Ini*|
-|           |           |           |           |           | *tiating* |
-|           |           |           |           |           | *Party*.  |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| REQREFNUM | 1         | n         | 1..1      | 32        | Identific |
-|           |           |           |           |           | ativo     |
-|           |           |           |           |           | univoco   |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | generato  |
-|           |           |           |           |           | dal Nodo  |
-|           |           |           |           |           | al fine   |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | rendere   |
-|           |           |           |           |           | unica ed  |
-|           |           |           |           |           | univoca   |
-|           |           |           |           |           | l’operazi |
-|           |           |           |           |           | one       |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | .         |
-|           |           |           |           |           | È usato   |
-|           |           |           |           |           | per il    |
-|           |           |           |           |           | recupero  |
-|           |           |           |           |           | informazi |
-|           |           |           |           |           | oni       |
-|           |           |           |           |           | relative  |
-|           |           |           |           |           | alla      |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | fatta,    |
-|           |           |           |           |           | anche nel |
-|           |           |           |           |           | caso di   |
-|           |           |           |           |           | mancata   |
-|           |           |           |           |           | risposta. |
-|           |           |           |           |           |           |
-|           |           |           |           |           | I primi   |
-|           |           |           |           |           | 8         |
-|           |           |           |           |           | caratteri |
-|           |           |           |           |           | contengon |
-|           |           |           |           |           | o         |
-|           |           |           |           |           | la data   |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | nel       |
-|           |           |           |           |           | formato   |
-|           |           |           |           |           | yyyyMM    |
-|           |           |           |           |           | dd.       |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| NUMORD    | 1         | an        | 1..1      | 1..50     | Codice    |
-|           |           |           |           |           | identific |
-|           |           |           |           |           | ativo     |
-|           |           |           |           |           | univoco   |
-|           |           |           |           |           | dell’ordi |
-|           |           |           |           |           | ne.       |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| MAC       | 1         | an        | 1..1      | 40        |*Message*  |
-|           |           |           |           |           |*Authentic*|
-|           |           |           |           |           |*ation*    |
-|           |           |           |           |           |*Code*:    |
-|           |           |           |           |           |rende      |
-|           |           |           |           |           |immodific  |
-|           |           |           |           |           |abile      |
-|           |           |           |           |           |da parte   |
-|           |           |           |           |           |dell'util  |
-|           |           |           |           |           |izzatore   |
-|           |           |           |           |           |finale i   |
-|           |           |           |           |           |dati       |
-|           |           |           |           |           |dell'ordi  |
-|           |           |           |           |           |ne.        |
-|           |           |           |           |           |Per il     |
-|           |           |           |           |           |calcolo    |
-|           |           |           |           |           |vedi §     |
-|           |           |           |           |           |9.4.5.3.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
++------------+---------+------------+---------+---------+------------------------------------------------+
+| **Dato**   | **Liv** | **Genere** | **Occ** | **Len** | **Contenuto**                                  |
++------------+---------+------------+---------+---------+------------------------------------------------+
+| OPERAZIONE | 1       | an         | 1..1    | 16      | Operazione richiesta. Contiene la stringa      |
+|            |         |            |         |         | "SITUAZIONEORDINE"                             |
++------------+---------+------------+---------+---------+------------------------------------------------+
+| TIMESTAMP  | 1       | n          | 1..1    | 23      | *Timestamp* locale.                            |
+|            |         |            |         |         |                                                |
+|            |         |            |         |         | Formato yyyy-MM-ddTHH:mm:ss.SSS                |
++------------+---------+------------+---------+---------+------------------------------------------------+
+| IDNEGOZIO  | 1       | n          | 1..1    | 1..50   | Identificativo del negozio del *merchant.*     |
++------------+---------+------------+---------+---------+------------------------------------------------+
+| OPERATORE  | 1       | an         | 1..1    | 8       | Indica chi ha richiesto l’operazione.          |
+|            |         |            |         |         |                                                |
+|            |         |            |         |         | Contiene la User ID di un operatore assegnato  |
+|            |         |            |         |         | dall’*Initiating Party.*                       |
++------------+---------+------------+---------+---------+------------------------------------------------+
+| REQREFNUM  | 1       | n          | 1..1    | 32      | Identificativo univoco della richiesta         |
+|            |         |            |         |         | generato dal Nodo al fine di rendere unica     |
+|            |         |            |         |         | ed univoca l’operazione di richiesta.          |
+|            |         |            |         |         | È usato per il recupero informazioni relative  |
+|            |         |            |         |         | alla richiesta fatta, anche nel caso di        |
+|            |         |            |         |         | mancata risposta.                              |
+|            |         |            |         |         |                                                |
+|            |         |            |         |         | **I primi 8 caratteri contengono la data**     |
+|            |         |            |         |         | **della richiesta nel formato yyyyMMdd.**      |
++------------+---------+------------+---------+---------+------------------------------------------------+
+| NUMORD     | 1       | an         | 1..1    | 1..50   | Codice identificativo univoco dell’ordine.     |
++------------+---------+------------+---------+---------+------------------------------------------------+
+| MAC        | 1       | an         | 1..1    | 40      | Message Authentication Code:                   |
+|            |         |            |         |         | rende immodificabile da parte                  |
+|            |         |            |         |         | dell'utilizzatore finale i dati dell'ordine.   |
+|            |         |            |         |         |                                                |
+|            |         |            |         |         | Per il calcolo vedi § 9.4.5.3                  |
++------------+---------+------------+---------+---------+------------------------------------------------+
 
 Il servizio restituisce una risposta in formato XML, con le
 caratteristiche riportate in Tabella 47.
@@ -3870,239 +3706,73 @@ caratteristiche riportate in Tabella 47.
 **Tabella** **47 - Parametri di messaggio di Risposta situazione ordine**
 **da Initiating Party**
 
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **Dato**  | **Liv**   | **Genere**| **Occ**   | **Len**   |**Contenu**|
-|           |           |           |           |           |**to**     |
-+===========+===========+===========+===========+===========+===========+
-| BPWXm     | 1         | s         | 1..1      |           | *root*    |
-| lRisposta |           |           |           |           | *element* |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | messaggio |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Times     | 2         | an        | 1..1      | 23        |*Timestamp*|
-| tamp      |           |           |           |           |           |
-|           |           |           |           |           | locale    |
-|           |           |           |           |           | relativo  |
-|           |           |           |           |           | alla data |
-|           |           |           |           |           | e all’ora |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | risposta. |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Formato   |
-|           |           |           |           |           | yyyy-MM-d |
-|           |           |           |           |           | dTHH:mm:s |
-|           |           |           |           |           | s.SSS     |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Esito     | 2         | n         | 1..1      | 2         | Contiene  |
-|           |           |           |           |           | l’esito   |
-|           |           |           |           |           | dell’oper |
-|           |           |           |           |           | azione    |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | .         |
-|           |           |           |           |           | Assume i  |
-|           |           |           |           |           | valori    |
-|           |           |           |           |           | riportati |
-|           |           |           |           |           | nella     |
-|           |           |           |           |           | Tabella   |
-|           |           |           |           |           | 48.       |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| MAC       | 2         | an        | 1..1      | 40        |*Message*  |
-|           |           |           |           |           |*Authentic*|
-|           |           |           |           |           |*ation*    |
-|           |           |           |           |           |*Code*:    |
-|           |           |           |           |           |rende      |
-|           |           |           |           |           |immodific  |
-|           |           |           |           |           |abile      |
-|           |           |           |           |           |da parte   |
-|           |           |           |           |           |dell'util  |
-|           |           |           |           |           |izzatore   |
-|           |           |           |           |           |finale i   |
-|           |           |           |           |           |dati       |
-|           |           |           |           |           |dell'ordi  |
-|           |           |           |           |           |ne.        |
-|           |           |           |           |           |Per il     |
-|           |           |           |           |           |calcolo    |
-|           |           |           |           |           |vedi §     |
-|           |           |           |           |           |9.4.5.4.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Dati      | 2         | s         | 1..1      |           | Struttura |
-|           |           |           |           |           | che       |
-|           |           |           |           |           | contiene  |
-|           |           |           |           |           | i dati    |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | situazion |
-|           |           |           |           |           | e         |
-|           |           |           |           |           | ordine e  |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | risposta  |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| RicSi     | 3         | S         | 1..1      |           | Struttura |
-| tuazioneO |           |           |           |           | che       |
-| rdine     |           |           |           |           | contiene  |
-|           |           |           |           |           | i dati    |
-|           |           |           |           |           | relativi  |
-|           |           |           |           |           | alla      |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | situazion |
-|           |           |           |           |           | e         |
-|           |           |           |           |           | ordine    |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Testa     | 4         | S         | 1..1      |           | Struttura |
-| taRichies |           |           |           |           | che       |
-| ta        |           |           |           |           | contiene  |
-|           |           |           |           |           | i dati    |
-|           |           |           |           |           | relativi  |
-|           |           |           |           |           | alla      |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | inviata   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Idneg     | 5         | Num       | 1..1      | 1..50     | Deve      |
-| ozio      |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | .         |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Opera     | 5         | An        | 1..1      | 8         | Deve      |
-| tore      |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | richiesta |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| ReqRe     | 5         | Num       | 1..1      | 32        | Deve      |
-| fNum      |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | .         |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| NumOr     | 4         | An        | 1..1      | 50        | Deve      |
-| dine      |           |           |           |           | contenere |
-|           |           |           |           |           | lo stesso |
-|           |           |           |           |           | valore    |
-|           |           |           |           |           | dell’omon |
-|           |           |           |           |           | imo       |
-|           |           |           |           |           | campo del |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | richiesta |
-|           |           |           |           |           | .         |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Situa     | 3         | @         | 1..1      |           | Elemento  |
-| zioneOrdi |           |           |           |           | con       |
-| ne        |           |           |           |           | attributi |
-|           |           |           |           |           | ,         |
-|           |           |           |           |           | necessari |
-|           |           |           |           |           | o         |
-|           |           |           |           |           | alla      |
-|           |           |           |           |           | corretta  |
-|           |           |           |           |           | interpret |
-|           |           |           |           |           | azione    |
-|           |           |           |           |           | dei dati  |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | autorizza |
-|           |           |           |           |           | zione     |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Numer     | 3         | n         | 1..1      | 5         | Attributo |
-| oElementi |           |           |           |           | dell’elem |
-|           |           |           |           |           | ento      |
-|           |           |           |           |           | Situazion |
-|           |           |           |           |           | eOrdine   |
-|           |           |           |           |           | atto a    |
-|           |           |           |           |           | contenere |
-|           |           |           |           |           | il numero |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | elementi  |
-|           |           |           |           |           | di tipo   |
-|           |           |           |           |           | Autorizza |
-|           |           |           |           |           | zione     |
-|           |           |           |           |           | presenti  |
-|           |           |           |           |           | nella     |
-|           |           |           |           |           | risposta  |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Autor     | 3         | S         | 1..n      |           | Struttura |
-| izzazione |           |           |           |           | che       |
-|           |           |           |           |           | contiene  |
-|           |           |           |           |           | i dati    |
-|           |           |           |           |           | relativi  |
-|           |           |           |           |           | alle      |
-|           |           |           |           |           | autorizza |
-|           |           |           |           |           | zioni     |
-|           |           |           |           |           | associate |
-|           |           |           |           |           | all’ordin |
-|           |           |           |           |           | e.        |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Times     | 4         | An        | 1..1      | 23        |*Timestamp*|
-| tamp      |           |           |           |           |           |
-|           |           |           |           |           | locale    |
-|           |           |           |           |           | relativo  |
-|           |           |           |           |           | alla data |
-|           |           |           |           |           | e all’ora |
-|           |           |           |           |           | del       |
-|           |           |           |           |           | messaggio |
-|           |           |           |           |           | di        |
-|           |           |           |           |           | risposta. |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Formato   |
-|           |           |           |           |           | yyyy-MM-d |
-|           |           |           |           |           | dTHH:mm:s |
-|           |           |           |           |           | s.SSS     |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| NumAut    | 4         | An        | 1..1      | 35        | Codice di |
-|           |           |           |           |           | autorizza |
-|           |           |           |           |           | zione     |
-|           |           |           |           |           | (contiene |
-|           |           |           |           |           | l’identif |
-|           |           |           |           |           | icativo   |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | transazio |
-|           |           |           |           |           | ne)       |
-|           |           |           |           |           |           |
-|           |           |           |           |           | È         |
-|           |           |           |           |           | valorizza |
-|           |           |           |           |           | to        |
-|           |           |           |           |           | in caso   |
-|           |           |           |           |           | di esito  |
-|           |           |           |           |           | positivo. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Stato     | 4         | Num       | 1..1      | 2         | Codice    |
-|           |           |           |           |           | che       |
-|           |           |           |           |           | indica lo |
-|           |           |           |           |           | stato     |
-|           |           |           |           |           | corrente  |
-|           |           |           |           |           | della     |
-|           |           |           |           |           | autorizza |
-|           |           |           |           |           | zione.    |
-|           |           |           |           |           |           |
-|           |           |           |           |           | Assume i  |
-|           |           |           |           |           | valori    |
-|           |           |           |           |           | riportati |
-|           |           |           |           |           | nella     |
-|           |           |           |           |           | Tabella   |
-|           |           |           |           |           | 49.       |
-+-----------+-----------+-----------+-----------+-----------+-----------+
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| **Dato**            | **Liv** | **Genere** | **Occ** | **Len** | **Contenuto**                                    |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| BPWXmlRisposta      | 1       | s          | 1..1    |         | *root element* del messaggio                     |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Timestamp           | 2       | an         | 1..1    | 23      | *Timestamp* locale relativo alla data            |
+|                     |         |            |         |         | e all’ora del messaggio di risposta.             |
+|                     |         |            |         |         |                                                  |
+|                     |         |            |         |         | Formato yyyy-MM-ddTHH:mm:ss.SSS                  |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Esito               | 2       | n          | 1..1    | 2       | Contiene l’esito dell’operazione richiesta.      |
+|                     |         |            |         |         | Assume i valori riportati nella Tabella 48       |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| MAC                 | 2       | an         | 1..1    | 40      | Message Authentication Code:                     |
+|                     |         |            |         |         | rende immodificabile da parte dell'utilizzatore  |
+|                     |         |            |         |         | finale i dati dell'ordine. Per il calcolo        |
+|                     |         |            |         |         | vedi § 9.4.5.4                                   |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Dati                | 2       | s          | 1..1    |         | Struttura che contiene i dati della richiesta    |
+|                     |         |            |         |         | di situazione ordine e del messaggio di          |
+|                     |         |            |         |         | risposta                                         |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| RicSituazioneOrdine | 3       | S          | 1..1    |         | Struttura che contiene i dati relativi           |
+|                     |         |            |         |         | alla richiesta di situazione ordine              |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| TestataRichiesta    | 4       | S          | 1..1    |         | Struttura che contiene i dati relativi alla      |
+|                     |         |            |         |         | richiesta inviata                                |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Idnegozio           | 5       | Num        | 1..1    | 1..50   | Deve contenere lo stesso valore dell’omonimo     |
+|                     |         |            |         |         | campo del messaggio di richiesta.                |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Operatore           | 5       | An         | 1..1    | 8       | Deve contenere lo stesso valore dell’omonimo     |
+|                     |         |            |         |         | campo del messaggio di richiesta                 |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| ReqRefNum           | 5       | Num        | 1..1    | 32      | Deve contenere lo stesso valore dell’omonimo     |
+|                     |         |            |         |         | campo del messaggio di richiesta.                |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| NumOrdine           | 4       | An         | 1..1    | 50      | Deve contenere lo stesso valore                  |
+|                     |         |            |         |         | dell’omonimo campo del messaggio                 |
+|                     |         |            |         |         | di richiesta.                                    |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| SituazioneOrdine    | 3       | @          | 1..1    |         | Elemento con attributi, necessario alla          |
+|                     |         |            |         |         | corretta interpretazione dei dati di             |
+|                     |         |            |         |         | autorizzazione                                   |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| NumeroElementi      | 3       | n          | 1..1    | 5       | Attributo dell’elemento SituazioneOrdine         |
+|                     |         |            |         |         | atto a contenere il numero di elementi di        |
+|                     |         |            |         |         | tipo Autorizzazione presenti nella risposta      |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Autorizzazione      | 3       | S          | 1..n    |         | Struttura che contiene i dati relativi alle      |
+|                     |         |            |         |         | autorizzazioni associate all’ordine.             |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Timestamp           | 4       | An         | 1..1    | 23      | *Timestamp* locale relativo alla data            |
+|                     |         |            |         |         | e all’ora del messaggio di risposta.             |
+|                     |         |            |         |         | Formato yyyy-MM-ddTHH:mm:ss.SSS                  |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| NumAut              | 4       | An         | 1..1    | 35      | Codice di autorizzazione                         |
+|                     |         |            |         |         | (contiene l’identificativo della transazione)    |
+|                     |         |            |         |         |                                                  |
+|                     |         |            |         |         | È valorizzato in caso di esito positivo.         |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+| Stato               | 4       | Num        | 1..1    | 2       | Codice che indica lo stato corrente              |
+|                     |         |            |         |         | della autorizzazione.                            |
+|                     |         |            |         |         |                                                  |
+|                     |         |            |         |         | Assume i valori riportati nella Tabella 49       |
++---------------------+---------+------------+---------+---------+--------------------------------------------------+
+
 
 **Tabella** **48 - Codici esito richiesta situazione**
 
