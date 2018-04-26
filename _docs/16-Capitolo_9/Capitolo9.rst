@@ -3424,13 +3424,13 @@ Tabella 42.
 |                       | Portale dell'Ente Creditore in uno dei tre possibili esiti previsti:                   |
 +-----------------------+----------------------------------------------------------------------------------------+
 |                       | **OK** il pagamento presso il Portale PSP è stato eseguito con successo;               |
-|                       |        quest’ultimo fornirà a breve una RT positiva                                    |
+|                       | quest’ultimo fornirà a breve una RT positiva                                           |
 +-----------------------+----------------------------------------------------------------------------------------+
 |                       | **ERROR** il pagamento presso il Portale PSP non è stato eseguito con successo;        |
-|                       |           quest’ultimo ha segnalato al Web-FESP l’esito negativo.                      |
+|                       | quest’ultimo ha segnalato al Web-FESP l’esito negativo.                                |
 +-----------------------+----------------------------------------------------------------------------------------+
 |                       | **DIFFERITO** l’esito del pagamento eseguito dall’utilizzatore finale presso il        |
-|                       |               Portale PSP sarà noto solo al ricevimento della RT.                      |
+|                       | Portale PSP sarà noto solo al ricevimento della RT.                                    |
 +-----------------------+----------------------------------------------------------------------------------------+
 
 Interfacce per la componente Wrapper MyBank
