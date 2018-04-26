@@ -251,21 +251,15 @@ supporto di input, può assumere i valori indicati in Tabella 54.
 
 **Tabella** **54 - Valori del parametro codificaInfrastrutturaPSP e XSD da utilizzare**
 
-
-+-----------------------+-----------------------+-----------------------+
-| **supporto in input** |**Parametrocodifica**  | **Schema XSD da**     |
-|                       |**InfrastrutturaPSP**  | **utilizzare**        |
-|                       |                       |                       |
-+=======================+=======================+=======================+
-| QR-Code o input da    | QR-CODE               | IdRPT_QR_Code_<versio |
-| terminale [1]_        |                       | ne>.xsd               |
-+-----------------------+-----------------------+-----------------------+
-| Barcode GS1-128       | BARCODE-GS1-128       | IdRPT_GS1_128_<versio |
-|                       |                       | ne>.xsd               |
-+-----------------------+-----------------------+-----------------------+
-| Barcode 128 AIM       | BARCODE-128-AIM       | IdRPT_128_AIM_<versio |
-| USS-128 tipo C        |                       | ne>.xsd               |
-+-----------------------+-----------------------+-----------------------+
++-----------------------------------+-----------------------------------------+-------------------------------+
+| **supporto in input**             | **ParametrocodificaInfrastrutturaPSP**  | **Schema XSD dautilizzare**   |
++===================================+=========================================+===============================+
+| QR-Code o input da terminale [1]_ | QR-CODE                                 | IdRPT_QR_Code_<versione>.xsd  |
++-----------------------------------+-----------------------------------------+-------------------------------+
+| Barcode GS1-128                   | BARCODE-GS1-128                         | IdRPT_GS1_128_<versione>.xsd  |
++-----------------------------------+-----------------------------------------+-------------------------------+
+| Barcode 128 AIM USS-128 tipo C    | BARCODE-128-AIM                         | IdRPT_128_AIM_<versione>.xsd  |
++-----------------------------------+-----------------------------------------+-------------------------------+
 
 Si precisa che in tutti e tre gli schemi XSD implementati il dato
 numeroAvviso è segmentato nelle tre componenti <aux digit>, <application
@@ -274,18 +268,15 @@ CodStazPA ed il terzo corrisponde a CodIUV .
 
 **Tabella** **55 - Codifica dell'Ente Creditore da utilizzare**
 
-+-----------------------+-----------------------+-----------------------+
-| **supporto in input** | **Codifica dell'Ente**| **Element Name**      |
-|                       | **Creditore**         |                       |
-+=======================+=======================+=======================+
-| QR-Code o input da    | Codice Fiscale        | CF                    |
-| terminale             |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Barcode GS1-128       | Codice GLN            | GLN                   |
-+-----------------------+-----------------------+-----------------------+
-| Barcode 128 AIM       | c/c Postale           | CCPost                |
-| USS-128 tipo C        |                       |                       |
-+-----------------------+-----------------------+-----------------------+
++--------------------------------+---------------------------------+-----------------------+
+| **supporto in input**          | **Codifica dell'EnteCreditore** | **Element Name**      |
++================================+=================================+=======================+
+| QR-Code o input da terminale   | Codice Fiscale                  | CF                    |
++--------------------------------+---------------------------------+-----------------------+
+| Barcode GS1-128                | Codice GLN                      | GLN                   |
++--------------------------------+---------------------------------+-----------------------+
+| Barcode 128 AIM USS-128 tipo C | c/c Postale                     | CCPost                |
++--------------------------------+---------------------------------+-----------------------+
 
 In Tabella 55 è indicato l'*element name* da utilizzare per la
 codifica dell'Ente Creditore in funzione della tipologia del supporto di
