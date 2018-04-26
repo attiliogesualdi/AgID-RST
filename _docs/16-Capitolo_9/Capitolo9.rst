@@ -3493,7 +3493,7 @@ informazioni indicate in Tabella 43.
 +-----------+---------+------------+---------+---------+---------------------------------------------------------+
 | NUMORD    | 1       | an         | 1..1    | 1..50   | Codice Identificativo                                   |
 |           |         |            |         |         | univoco dell’ordine. I caratteri ammessi sono lettere,  |
-|           |         |            |         |         | cifre, “-“ e “_” [11]_                                  |
+|           |         |            |         |         | cifre, “-“ e “_” [9]_                                   |
 |           |         |            |         |         |                                                         |
 |           |         |            |         |         | Il valore del campo è generato dalla componente         |
 |           |         |            |         |         | Wrapper MyBank.                                         |
@@ -3537,7 +3537,7 @@ Stringhe URL utilizzate per la "redirect".
 
 Si fa presente che in questa fase il contenuto dei campi URLDONE,
 URLBACK ed URLMS sono predisposti direttamente a cura dell'Ente
-Creditore [9]_.
+Creditore [10]_.
 
 Nel caso in cui le stringhe che rappresentano le URL inviate dalla
 componente “Wrapper MyBank” contengano parametri o caratteri
@@ -3731,7 +3731,7 @@ informazioni di Tabella 44.
 | 07                                | Ordine duplicato                  |
 +-----------------------------------+-----------------------------------+
 
-Il campo MAC è calcolato secondo quanto indicato al `§ 9.4.5.2 <../16-Capitolo_9/Capitolo9.rst#mac-di-confermaesito-pagamento>`_ [10]_. Il
+Il campo MAC è calcolato secondo quanto indicato al `§ 9.4.5.2 <../16-Capitolo_9/Capitolo9.rst#mac-di-confermaesito-pagamento>`_ [11]_. Il
 dato viene valorizzato con la stringa costante "*NULL*" nel caso in cui
 l'esito della transazione sia negativo.
 
