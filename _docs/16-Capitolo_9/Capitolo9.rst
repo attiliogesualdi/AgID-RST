@@ -3805,7 +3805,7 @@ caratteristiche riportate in Tabella 47.
 | 01             | Autorizzazione negata                                   |
 +----------------+---------------------------------------------------------+
 | 02             | Autorizzazione contabilizzata da elaborare              |
-+---------------+----------------------------------------------------------+
++----------------+---------------------------------------------------------+
 | 03             | Autorizzazione contabilizzata elaborata dal clearing    |
 +----------------+---------------------------------------------------------+
 | 04             | Autorizzazione stornata                                 |
