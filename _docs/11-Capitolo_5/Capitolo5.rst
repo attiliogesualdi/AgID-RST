@@ -26,8 +26,8 @@ sono individuate come:
 -  *Esito Revoca* (**ER**)
 
 Nel presente capitolo sono inoltre riportate le informazioni relative a
-"Tabella delle Controparti" (`§ 4.2.1 <../09-Capitolo_4/Capitolo4.rst#tabella-delle-controparti>`__), "Catalogo Dati Informativi" (`§
-5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`__) e flussi inerenti i “Totali di Traffico” (`§ 4.5.1 <../09-Capitolo_4/Capitolo4.rst#totali-di-traffico>`__).
+"Tabella delle Controparti" (`§ 4.2.1 <../09-Capitolo_4/Capitolo4.rst#tabella-delle-controparti>`__), "Catalogo Dati Informativi" 
+(`§5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`__) e flussi inerenti i “Totali di Traffico” (`§ 4.5.1 <../09-Capitolo_4/Capitolo4.rst#totali-di-traffico>`__).
 
 Formato dei messaggi
 --------------------
@@ -507,9 +507,9 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | contesto                                  |
 |                         |         |            |         |         |                 | nel quale viene effettuato                |
 |                         |         |            |         |         |                 | il versamento.                            |
-|                         |         |            |         |         |                 | Si faccia riferimento al § 7.3            |
-|                         |         |            |         |         |                 | della                                     |
-|                         |         |            |         |         |                 | presente Sezione.                         |
+|                         |         |            |         |         |                 | Si faccia riferimento al                  |
+|                         |         |            |         |         |                 | § 7.3                                     |
+|                         |         |            |         |         |                 | della presente Sezione.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | ibanAddebito            | 2       | an         |         | 1..35   | Debtor.         | Identifica l’International                |
 |                         |         |            |         |         | Account         | Bank Account                              |
