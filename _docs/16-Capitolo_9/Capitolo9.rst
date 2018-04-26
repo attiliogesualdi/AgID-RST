@@ -3358,9 +3358,10 @@ sono specificati nella Tabella 41.
 |                                   |re-direzione verso il Web-FESP si veda il paragrafo                                            |
 |                                   |(`8.3.1 <../15-Capitolo_8/Capitolo8.rst#re-direzione-dal-portale-ec-verso-il-web-fesp>`_).     |
 |                                   |codice abbreviato identifica il                                                                |
-|                                   |Il linguaggio secondo lo standard                                                              |   
+|                                   |Il linguaggio secondo lo standard                                                              |
 |                                   |ISO 693-3.                                                                                     |
 +-----------------------------------+-----------------------------------------------------------------------------------------------+
+
 
 Re-direzione dal Portale PSP verso il Web-FESP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3383,128 +3384,54 @@ Tabella 42.
 
 **Tabella** **42 - Parametri di re-direzione dal Portale PSP verso il Web-FESP**
 
-+-----------------------+-----------------------+-----------------------+
-| **Parametri**         |     **Descrizione**   |                       |
-+=======================+=======================+=======================+
-| **urlWeb-FESP**       | è lo URL della        |                       |
-|                       | componente Web-FESP   |                       |
-|                       | del NodoSPC.          |                       |
-+-----------------------+-----------------------+-----------------------+
-| **idDominio**         | identificativoDom     |                       |
-|                       | inio                  |                       |
-| (opzionale)           | dell'Ente             |                       |
-|                       | Creditore che ha      |                       |
-|                       | eseguito la           |                       |
-|                       | richiesta di          |                       |
-|                       | pagamento             |                       |
-|                       | mediante la RPT.      |                       |
-|                       |                       |                       |
-|                       | Nel caso di           |                       |
-|                       | singola RPT           |                       |
-|                       | coincide              |                       |
-|                       | necessariamente       |                       |
-|                       | con quello            |                       |
-|                       | contenuto nella       |                       |
-|                       | RPT stessa.           |                       |
-|                       | RPT stessa.           |                       |
-|                       |                       |                       |
-|                       | Il parametro è        |                       |
-|                       | bbligatorio nel       |                       |
-|                       | caso di utilizzo      |                       |
-|                       | della primitiva       |                       |
-|                       | **nodoInviaRPT**,     |                       |
-|                       |                       |                       |
-|                       | mentre non deve       |                       |
-|                       | essere presente       |                       |
-|                       | nel caso di           |                       |
-|                       | utilizzo della        |                       |
-|                       | primitiva             |                       |
-|                       | **nodoInviaCarre**    |                       |
-|                       | **lloRPT**.           |                       |
-+-----------------------+-----------------------+-----------------------+
-|**parametriPagamento** | *Query string*        |                       |
-|**Immediato**          | fornita dal PSP       |                       |
-|                       | mediante la           |                       |
-|                       | *Response* della      |                       |
-|                       | primitiva invocata in |                       |
-|                       | precedenza:           |                       |
-|                       |                       |                       |
-|                       | -  parametro **O-3**  |                       |
-|                       |    per                |                       |
-|                       |    **pspInviaRPT**    |                       |
-|                       |    (vedi §9.2.1.1)    |                       |
-|                       |                       |                       |
-|                       | -  parametro **O-3**  |                       |
-|                       |    per                |                       |
-|                       |    **pspInviaCar**    |                       |
-|                       |    **relloRPT**       |                       |
-|                       |    (vedi §9.2.1.2).   |                       |
-+-----------------------+-----------------------+-----------------------+
-| **idCarrello**        | parametro opzionale,  |                       |
-|                       | presente nel caso sia |                       |
-| (opzionale)           | restituito dal PSP    |                       |
-|                       | nella *Response*      |                       |
-|                       | della primitiva       |                       |
-|                       | invocata in           |                       |
-|                       | precedenza:           |                       |
-|                       |                       |                       |
-|                       | -  parametro **O-2**  |                       |
-|                       |    per                |                       |
-|                       |    **pspInviaRPT**    |                       |
-|                       |    (vedi §9.2.1.1)    |                       |
-|                       | -  parametro **O-2**  |                       |
-|                       |    per                |                       |
-|                       |    **pspInviaCar**    |                       |
-|                       |    **relloRPT**       |                       |
-|                       |    (vedi §9.2.1.2).   |                       |
-+-----------------------+-----------------------+-----------------------+
-| **codiceRitornoPSP**  | stringa contenente un |                       |
-|                       | parametro fornito dal |                       |
-|                       | PSP, il cui formato è |                       |
-|                       | lista di valori       |                       |
-|                       | possibili sono        |                       |
-|                       | concordati a priori   |                       |
-|                       | dallo specifico PSP   |                       |
-|                       | con il NodoSPC. Il    |                       |
-|                       | significato del       |                       |
-|                       | parametro è l’esito   |                       |
-|                       | della transazione     |                       |
-|                       | on-line               |                       |
-|                       | dell’utilizzatore     |                       |
-|                       | finale sul Portale    |                       |
-|                       | del PSP. Tale esito   |                       |
-|                       | viene mappato dal     |                       |
-|                       | Web-FESP nell’URL di  |                       |
-|                       | re-direzione verso il |                       |
-|                       | Portale dell'Ente     |                       |
-|                       | Creditore in uno dei  |                       |
-|                       | tre possibili esiti   |                       |
-|                       | previsti:             |                       |
-+-----------------------+-----------------------+-----------------------+
-|                       | **OK**                | il pagamento presso   |
-|                       |                       | il Portale PSP è      |
-|                       |                       | stato eseguito con    |
-|                       |                       | successo;             |
-|                       |                       | quest’ultimo fornirà  |
-|                       |                       | a breve una RT        |
-|                       |                       | positiva              |
-+-----------------------+-----------------------+-----------------------+
-|                       | **ERROR**             | il pagamento presso   |
-|                       |                       | il Portale PSP non è  |
-|                       |                       | stato eseguito con    |
-|                       |                       | successo;             |
-|                       |                       | quest’ultimo ha       |
-|                       |                       | segnalato al Web-FESP |
-|                       |                       | l’esito negativo.     |
-+-----------------------+-----------------------+-----------------------+
-|                       | **DIFFERITO**         | l’esito del pagamento |
-|                       |                       | eseguito              |
-|                       |                       | dall’utilizzatore     |
-|                       |                       | finale presso il      |
-|                       |                       | Portale PSP sarà noto |
-|                       |                       | solo al ricevimento   |
-|                       |                       | della RT.             |
-+-----------------------+-----------------------+-----------------------+
++-----------------------+----------------------------------------------------------------------------------------+
+| **Parametri**         |     **Descrizione**                                                                    |
++=======================+========================================================================================+
+| **urlWeb-FESP**       | è lo URL della componente Web-FESP del NodoSPC.                                        |
++-----------------------+----------------------------------------------------------------------------------------+
+| **idDominio**         | identificativoDominio dell'Ente Creditore che ha eseguito la richiesta di pagamento    |
+| (opzionale)           | mediante la RPT.                                                                       |
+|                       | Nel caso di singola RPT coincide necessariamente con quello contenuto nella            |
+|                       | RPT stessa.                                                                            |
+|                       |                                                                                        |
+|                       | Il parametro è obbligatorio nel caso di utilizzo della primitiva **nodoInviaRPT**,     |
+|                       | mentre non deve essere presente nel caso di utilizzo della primitiva                   |
+|                       | **nodoInviaCarrelloRPT**.                                                              |
++-----------------------+----------------------------------------------------------------------------------------+
+|**parametriPagamento** | *Query string* fornita dal PSP mediante la *Response* della primitiva invocata in      |
+|**Immediato**          | precedenza:                                                                            |
+|                       |                                                                                        |
+|                       |                                                                                        |
+|                       | -  parametro **O-3** per **pspInviaRPT**                                               |
+|                       |    (vedi §9.2.1.1)                                                                     |
+|                       |                                                                                        |
+|                       | -  parametro **O-3** per **pspInviaCarrelloRPT**                                       |
+|                       |    (vedi §9.2.1.2).                                                                    |
++-----------------------+----------------------------------------------------------------------------------------+
+| **idCarrello**        | parametro opzionale, presente nel caso sia restituito dal PSP nella *Response*         |
+| (opzionale)           | della primitiva invocata in precedenza:                                                |
+|                       |                                                                                        |
+|                       | -  parametro **O-2** per **pspInviaRPT**                                               |
+|                       |    (vedi §9.2.1.1)                                                                     |
+|                       |                                                                                        |
+|                       | -  parametro **O-2** per **pspInviaCarrelloRPT**                                       |
+|                       |    (vedi §9.2.1.2).                                                                    |
++-----------------------+----------------------------------------------------------------------------------------+
+| **codiceRitornoPSP**  | stringa contenente un parametro fornito dal PSP, il cui formato è lista di valori      |
+|                       | possibili sono concordati a priori dallo specifico PSP con il NodoSPC. Il significato  |
+|                       | del parametro è l’esito della transazione on-line dell’utilizzatore finale sul Portale |
+|                       | del PSP. Tale esito viene mappato dal Web-FESP nell’URL di re-direzione verso il       |
+|                       | Portale dell'Ente Creditore in uno dei tre possibili esiti previsti:                   |
++-----------------------+----------------------------------------------------------------------------------------+
+|                       | **OK** il pagamento presso il Portale PSP è stato eseguito con successo;               |
+|                       |        quest’ultimo fornirà a breve una RT positiva                                    |
++-----------------------+----------------------------------------------------------------------------------------+
+|                       | **ERROR** il pagamento presso il Portale PSP non è stato eseguito con successo;        |
+|                       |           quest’ultimo ha segnalato al Web-FESP l’esito negativo.                      |
++-----------------------+----------------------------------------------------------------------------------------+
+|                       | **DIFFERITO** l’esito del pagamento eseguito dall’utilizzatore finale presso il        |
+|                       |               Portale PSP sarà noto solo al ricevimento della RT.                      |
++-----------------------+----------------------------------------------------------------------------------------+
 
 Interfacce per la componente Wrapper MyBank
 -------------------------------------------
