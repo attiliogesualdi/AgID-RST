@@ -3398,8 +3398,8 @@ Tabella 36:
 |                       |                                                                                            |
 |                       |                                                                                            |
 |                       | - <idSession> è generato dal NodoSPC e identifica in modo univoco l’operazione di          |
-|                       |               re-indirizzamento relativa alla RPT della primitiva nodoInviaRPT,            |
-|                       |               nel caso alla primitiva nodoInviaCarrelloRPT può essere trascurato           |
+|                       | re-indirizzamento relativa alla RPT della primitiva nodoInviaRPT,                          |
+|                       | nel caso alla primitiva nodoInviaCarrelloRPT può essere trascurato                         |
 +-----------------------+--------------------------------------------------------------------------------------------+
 | **lang** (opzionale)  | specifica il linguaggio scelto dall'utilizzatore finale sul Portale dell'Ente Creditore,   |
 |                       | secondo la codifica standard ISO 693-3.                                                    |
