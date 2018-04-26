@@ -3554,7 +3554,7 @@ all'interno del WSDL del servizio.
    - 1 Elenco incompleto"
    "numeroAvvisi",2,"n","1..1",3,"Numero avvisi presenti nell'elenco."
    "avvisoDigitale",2,"s","0..n",,"Struttura facoltativa che contiene le informazioni dell'avviso digitale in modalità pull. La struttura è **obbligatoria** se l'elemento **numeroAvvisi e maggiore di 0**."
-   "codiceAvviso",3,"an","1..1",18,"Codice dell’avviso di pagamento predisposto secondo quanto indicato al § 7.4.1 delle SANP. Contiene il codice IUV."
+   "codiceAvviso",3,"an","1..1",18,"Codice dell’avviso di pagamento predisposto secondo quanto indicato al `§ 7.4.1 <_docs/13-Capitolo_7/Capitolo7.rst#codice-contesto-pagamento/>`_ delle SANP. Contiene il codice IUV."
    "statoPagamento",3,"an","1..1","1.2","
    
    - 00 L’avviso è pagabile 
