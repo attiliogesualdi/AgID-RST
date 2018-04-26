@@ -97,102 +97,35 @@ Formato dei dati
 Le colonne *Liv,* *Genere,* *Occ*, *Len* e *UNIFI* assumono i seguenti
 significati:
 
-+-----------------+-----------------+-----------------+-----------------+
-| **colonna**     | *Liv*           | indica il       |                 |
-|                 |                 | livello di      |                 |
-|                 |                 | indentazione    |                 |
-|                 |                 | del dato al     |                 |
-|                 |                 | fine di rendere |                 |
-|                 |                 | evidenti le     |                 |
-|                 |                 | strutture che   |                 |
-|                 |                 | contengono      |                 |
-|                 |                 | ulteriori       |                 |
-|                 |                 | informazioni    |                 |
-|                 |                 | (colonna Genere |                 |
-|                 |                 | uguale ad s):   |                 |
-|                 |                 | esempio, le     |                 |
-|                 |                 | strutture di    |                 |
-|                 |                 | livello 1 sono  |                 |
-|                 |                 | formate da      |                 |
-|                 |                 | tutti i dati di |                 |
-|                 |                 | livello         |                 |
-|                 |                 | superiore ad 1, |                 |
-|                 |                 | quelle di       |                 |
-|                 |                 | livello 2 sono  |                 |
-|                 |                 | formate da      |                 |
-|                 |                 | tutti i dati di |                 |
-|                 |                 | livello         |                 |
-|                 |                 | superiore a 2,  |                 |
-|                 |                 | e così via.     |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **colonna**     | *Genere*        | che può         |                 |
-|                 |                 | assumere i      |                 |
-|                 |                 | seguenti valori |                 |
-+-----------------+-----------------+-----------------+-----------------+
-|                 |                 | s               | struttura che   |
-|                 |                 |                 | può contenere   |
-|                 |                 |                 | altre strutture |
-|                 |                 |                 | o dati,         |
-+-----------------+-----------------+-----------------+-----------------+
-|                 |                 | an              | dato            |
-|                 |                 |                 | alfanumerico,   |
-+-----------------+-----------------+-----------------+-----------------+
-|                 |                 | n               | dato numerico.  |
-+-----------------+-----------------+-----------------+-----------------+
-| **colonna**     | *Occ*           | indica le       |                 |
-|                 |                 | “occorrenze”    |                 |
-|                 |                 | del dato nel    |                 |
-|                 |                 | formato         |                 |
-|                 |                 | **min..max**.   |                 |
-+-----------------+-----------------+-----------------+-----------------+
-|                 |                 | L’eventuale     |                 |
-|                 |                 | obbligatorietà  |                 |
-|                 |                 | di tali         |                 |
-|                 |                 | informazioni è  |                 |
-|                 |                 | legata alla     |                 |
-|                 |                 | natura          |                 |
-|                 |                 | dell’ente, alle |                 |
-|                 |                 | specifiche      |                 |
-|                 |                 | esigenze e      |                 |
-|                 |                 | caratteristiche |                 |
-|                 |                 | dell’operazione |                 |
-|                 |                 | ovvero ad       |                 |
-|                 |                 | accordi tra     |                 |
-|                 |                 | utilizzatore e  |                 |
-|                 |                 | prestatore di   |                 |
-|                 |                 | servizi di      |                 |
-|                 |                 | pagamento.      |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **colonna**     | *Len*           | indica la       |                 |
-|                 |                 | lunghezza       |                 |
-|                 |                 | massima del     |                 |
-|                 |                 | dato nel        |                 |
-|                 |                 | formato         |                 |
-|                 |                 | *min..max*; nel |                 |
-|                 |                 | caso si tratti  |                 |
-|                 |                 | di una          |                 |
-|                 |                 | lunghezza fissa |                 |
-|                 |                 | comparirà solo  |                 |
-|                 |                 | il dato *len*,  |                 |
-|                 |                 | nel caso di     |                 |
-|                 |                 | lunghezze fisse |                 |
-|                 |                 | in alternativa  |                 |
-|                 |                 | la notazione    |                 |
-|                 |                 | sarà *len1*  |  |                 |
-|                 |                 | *len2*.         |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **colonna**     | *UNIFI*         | indica la       |                 |
-|                 |                 | corrispondenza  |                 |
-|                 |                 | corrispondenza  |                 |
-|                 |                 | del Dato con    |                 |
-|                 |                 | gli schemi ISO  |                 |
-|                 |                 | 20022 -         |                 |
-|                 |                 | UNIversal       |                 |
-|                 |                 | Financial       |                 |
-|                 |                 | Industry        |                 |
-|                 |                 | message         |                 |
-|                 |                 | (UNIFI).        |                 |
-+-----------------+-----------------+-----------------+-----------------+
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Liv*    | indica il livello di                                                          |
+|             |          | indentazione del dato al fine di rendere evidenti le strutture che contengono |
+|             |          | ulteriori informazioni (colonna Genere uguale ad s): esempio, le strutture di |
+|             |          | livello 1 sono formate da tutti i dati di livello superiore ad 1, quelle di   |
+|             |          | livello 2 sono formate da tutti i dati di livello superiore a 2, e così via.  |
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Genere* | che può assumere i seguenti valori:                                           |
+|             |          |                                                                               |
+|             |          | - s - struttura che può contenere altre strutture o dati,                     |
+|             |          |                                                                               |
+|             |          | - an - dato alfanumerico                                                      |
+|             |          |                                                                               |
+|             |          | - n - dato numerico.                                                          |
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Occ*    | indica le “occorrenze” del dato nel formato **min..max.**                     |
+|             |          | L’eventuale obbligatorietà di tali informazioni è legata alla                 |
+|             |          | natura dell’ente, alle specifiche esigenze e caratteristiche                  |
+|             |          | dell’operazione ovvero ad accordi tra utilizzatore e                          |
+|             |          | prestatore di servizi di pagamento.                                           |
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Len*    | indica la lunghezza massima del dato nel formato                              |
+|             |          | *min..max;* nel caso si tratti di una lunghezza fissa                         |
+|             |          | comparirà solo il dato len, nel caso di lunghezze fisse                       |
+|             |          | in alternativa la notazione sarà *len1 | len2.*                               |
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *UNIFI*  | indica la corrispondenza del Dato con gli schemi                              |
+|             |          | ISO 20022 - UNIversal Financial Industry message (UNIFI).                     |
++-------------+----------+-------------------------------------------------------------------------------+
 
 Richiesta Pagamento Telematico (RPT)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
