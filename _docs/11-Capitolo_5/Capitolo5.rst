@@ -3538,8 +3538,9 @@ Le informazioni elencate in Tabella 28 definiscono il parametro O-2
 elencoAvvisiDigitali presente nella *response* della primitiva
 **nodoChiediElencoAvvisiDigitali** disponibile per i PSP che erogano
 il servizio di invio degli avvisi su iniziativa del PSP (modalità pull)
-e della correlata primitiva **paaChiediElencoAvvisiDigitali** (`cfr. §
-8.2.8.1 <../15-Capitolo_8/Capitolo8.rst#paachiedielencoavvisidigitali>`__) messa a disposizione dall'Ente Creditore; il livello della
+e della correlata primitiva **paaChiediElencoAvvisiDigitali** 
+(`cfr. §8.2.8.1 <../15-Capitolo_8/Capitolo8.rst#paachiedielencoavvisidigitali>`__) 
+messa a disposizione dall'Ente Creditore; il livello della
 struttura così definita inizia da 2 in quanto descritta formalmente
 all'interno del WSDL del servizio.
 
@@ -3554,7 +3555,7 @@ all'interno del WSDL del servizio.
    - 1 Elenco incompleto"
    "numeroAvvisi",2,"n","1..1",3,"Numero avvisi presenti nell'elenco."
    "avvisoDigitale",2,"s","0..n",,"Struttura facoltativa che contiene le informazioni dell'avviso digitale in modalità pull. La struttura è **obbligatoria** se l'elemento **numeroAvvisi e maggiore di 0**."
-   "codiceAvviso",3,"an","1..1",18,"Codice dell’avviso di pagamento predisposto secondo quanto indicato al `§ 7.4.1 <_docs/13-Capitolo_7/Capitolo7.rst#codice-contesto-pagamento/>`_ delle SANP. Contiene il codice IUV."
+   "codiceAvviso",3,"an","1..1",18,"Codice dell’avviso di pagamento predisposto secondo quanto indicato al `§ 7.4.1 <../13-Capitolo_7/Capitolo7.rst#codice-contesto-pagamento/>`_ delle SANP. Contiene il codice IUV."
    "statoPagamento",3,"an","1..1","1.2","
    
    - 00 L’avviso è pagabile 
