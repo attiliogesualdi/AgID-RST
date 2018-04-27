@@ -441,7 +441,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | nel quale viene effettuato                |
 |                         |         |            |         |         |                 | il versamento.                            |
 |                         |         |            |         |         |                 | Si faccia riferimento al                  |
-|                         |         |            |         |         |                 | § 7.3                                     |
+|                         |         |            |         |         |                 | `§ 7.3 <../13-Capitolo_7/Capitolo7.       |    |                         |         |            |         |         |                 | rst#codice-contesto-pagamento>`_          |
 |                         |         |            |         |         |                 | della presente Sezione.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | ibanAddebito            | 2       | an         |         | 1..35   | Debtor.         | Identifica l’International                |
