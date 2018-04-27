@@ -3418,113 +3418,112 @@ dove i parametri (tra parentesi quelli opzionali) sono indicati nella
 
 **Tabella** **37 - Parametri di re-direzione verso il portale dell'Ente Creditore**
 
-+-----------------------+-----------------------+-----------------------+
-| **Parametri**         |     **Descrizione**   |                       |
-+=======================+=======================+=======================+
-| **urlPortalePA**      | è lo URL del Portale  |                       |
-|                       | dell'Ente Creditore.  |                       |
-|                       | Ad esempio:           |                       |
-|                       | http://www.giustizia. |                       |
-|                       | it/pagamenti          |                       |
-+-----------------------+-----------------------+-----------------------+
-| **idDominio**         | identificativoDominio |                       |
-|                       | dell'Ente Creditore   |                       |
-| (opzionale)           | che ha eseguito la    |                       |
-|                       | richiesta di          |                       |
-|                       | pagamento mediante la |                       |
-|                       | RPT. Coincide         |                       |
-|                       | necessariamente con   |                       |
-|                       | quello contenuto      |                       |
-|                       | nella RPT stessa.     |                       |
-|                       |                       |                       |
-|                       | Il parametro è        |                       |
-|                       | obbligatorio nel caso |                       |
-|                       | di utilizzo della     |                       |
-|                       | primitiva             |                       |
-|                       | *nodoInviaRPT*,       |                       |
-|                       | mentre non deve       |                       |
-|                       | essere presente nel   |                       |
-|                       | caso di utilizzo      |                       |
-|                       | della primitiva       |                       |
-|                       | *nodoInviaCarrelloRPT*|                       |
-+-----------------------+-----------------------+-----------------------+
-| **idSession**         | è generato dal        |                       |
-|                       | NodoSPC e identifica  |                       |
-|                       | univocamente          |                       |
-|                       | l’operazione di       |                       |
-|                       | re-indirizzamento per |                       |
-|                       | il pagamento          |                       |
-|                       | associato alla RPT    |                       |
-|                       | della                 |                       |
-|                       | **nodoInviaRPT**      |                       |
-|                       | (vedi § 8.3.1).       |                       |
-+-----------------------+-----------------------+-----------------------+
-| **esito**             | corrisponde alla      |                       |
-|                       | traduzione dell’esito |                       |
-|                       | della transazione     |                       |
-|                       | on-line fornito dal   |                       |
-|                       | Portale PSP nella     |                       |
-|                       | *re-direzione* di     |                       |
-|                       | ritorno al Web-FESP,  |                       |
-|                       | dopo che              |                       |
-|                       | l’utilizzatore finale |                       |
-|                       | ha interagito con il  |                       |
-|                       | Portale PSP. Può      |                       |
-|                       | essere utilizzato     |                       |
-|                       | opzionalmente dal     |                       |
-|                       | Portale dell'Ente     |                       |
-|                       | Creditore per         |                       |
-|                       | scegliere             |                       |
-|                       | automaticamente una   |                       |
-|                       | pagina da presentare  |                       |
-|                       | all’utilizzatore      |                       |
-|                       | finale in base        |                       |
-|                       | all’esito della       |                       |
-|                       | transazione. In ogni  |                       |
-|                       | caso l’esito certo    |                       |
-|                       | del pagamento è dato  |                       |
-|                       | dalla RT. I valori di |                       |
-|                       | **esito** ammessi     |                       |
-|                       | sono:                 |                       |
-+-----------------------+-----------------------+-----------------------+
-|                       | **OK**                | il pagamento presso   |
-|                       |                       | il Portale PSP è      |
-|                       |                       | stato eseguito con    |
-|                       |                       | successo;             |
-|                       |                       | quest’ultimo fornirà  |
-|                       |                       | a breve una RT        |
-|                       |                       | positiva              |
-+-----------------------+-----------------------+-----------------------+
-|                       | **ERROR**             | il pagamento presso   |
-|                       |                       | il Portale PSP non è  |
-|                       |                       | stato eseguito con    |
-|                       |                       | successo;             |
-|                       |                       | quest’ultimo ha       |
-|                       |                       | segnalato al Web-FESP |
-|                       |                       | l’esito negativo.     |
-+-----------------------+-----------------------+-----------------------+
-|                       | **DIFFERITO**         | l’esito del pagamento |
-|                       |                       | eseguito              |
-|                       |                       | dall’utilizzatore     |
-|                       |                       | finale presso il      |
-|                       |                       | Portale PSP sarà noto |
-|                       |                       | solo al ricevimento   |
-|                       |                       | della RT.             |
-+-----------------------+-----------------------+-----------------------+
-| **URLesitoPSP**       | è tutta la *query*    |                       |
-| (opzionale, a         | *string* dei parametri|                       |
-| richiesta)            | passati dal Portale   |                       |
-|                       | PSP al Web-FESP senza |                       |
-|                       | traduzione in         |                       |
-|                       | idSession ed esito.   |                       |
-|                       | Esempio per uno       |                       |
-|                       | specifico PSP:        |                       |
-|                       |                       |                       |
-|                       | "idBruciatura=abc1d4e |                       |
-|                       | 7f3a8&idCarrello=1234 |                       |
-|                       | 56789&codiceRitorno=K |                       |
-|                       | O_02"                 |                       |
-+-----------------------+-----------------------+-----------------------+
++-----------------------+--------------------------------------------------------+-----------------------+
+| **Parametri**         |     **Descrizione**                                    |                       |
++=======================+========================================================+=======================+
+| **urlPortalePA**      | è lo URL del Portale                                   |                       |
+|                       | dell'Ente Creditore.                                   |                       |
+|                       | Ad esempio:                                            |                       |
+|                       | http://www.giustizia.                                  |                       |
+|                       | it/pagamenti                                           |                       |
++-----------------------+--------------------------------------------------------+-----------------------+
+| **idDominio**         | identificativoDominio                                  |                       |
+|                       | dell'Ente Creditore                                    |                       |
+| (opzionale)           | che ha eseguito la                                     |                       |
+|                       | richiesta di                                           |                       |
+|                       | pagamento mediante la                                  |                       |
+|                       | RPT. Coincide                                          |                       |
+|                       | necessariamente con                                    |                       |
+|                       | quello contenuto                                       |                       |
+|                       | nella RPT stessa.                                      |                       |
+|                       |                                                        |                       |
+|                       | Il parametro è                                         |                       |
+|                       | obbligatorio nel caso                                  |                       |
+|                       | di utilizzo della                                      |                       |
+|                       | primitiva                                              |                       |
+|                       | *nodoInviaRPT*,                                        |                       |
+|                       | mentre non deve                                        |                       |
+|                       | essere presente nel                                    |                       |
+|                       | caso di utilizzo                                       |                       |
+|                       | della primitiva                                        |                       |
+|                       | *nodoInviaCarrelloRPT*                                 |                       |
++-----------------------+--------------------------------------------------------+-----------------------+
+| **idSession**         | è generato dal                                         |                       |
+|                       | NodoSPC e identifica                                   |                       |
+|                       | univocamente                                           |                       |
+|                       | l’operazione di                                        |                       |
+|                       | re-indirizzamento per                                  |                       |
+|                       | il pagamento                                           |                       |
+|                       | associato alla RPT                                     |                       |
+|                       | della                                                  |                       |
+|                       | **nodoInviaRPT**                                       |                       |
+|                       | (`vedi § 8.3.1 <../15-Capitolo_8/Capitolo8.rst#re-     |                       |
+|                       | direzione-dal-portale-ec-verso-il-web-fesp>`_).        |                       |
++-----------------------+--------------------------------------------------------+-----------------------+
+| **esito**             | corrisponde alla                                       |                       |
+|                       | traduzione dell’esito                                  |                       |
+|                       | della transazione                                      |                       |
+|                       | on-line fornito dal                                    |                       |
+|                       | Portale PSP nella                                      |                       |
+|                       | *re-direzione* di                                      |                       |
+|                       | ritorno al Web-FESP,                                   |                       |
+|                       | dopo che                                               |                       |
+|                       | l’utilizzatore finale                                  |                       |
+|                       | ha interagito con il                                   |                       |
+|                       | Portale PSP. Può                                       |                       |
+|                       | essere utilizzato                                      |                       |
+|                       | opzionalmente dal                                      |                       |
+|                       | Portale dell'Ente                                      |                       |
+|                       | Creditore per                                          |                       |
+|                       | scegliere                                              |                       |
+|                       | automaticamente una                                    |                       |
+|                       | pagina da presentare                                   |                       |
+|                       | all’utilizzatore                                       |                       |
+|                       | finale in base                                         |                       |
+|                       | all’esito della                                        |                       |
+|                       | transazione. In ogni                                   |                       |
+|                       | caso l’esito certo                                     |                       |
+|                       | del pagamento è dato                                   |                       |
+|                       | dalla RT. I valori di                                  |                       |
+|                       | **esito** ammessi                                      |                       |
+|                       | sono:                                                  |                       |
++-----------------------+--------------------------------------------------------+-----------------------+
+|                       | **OK**                                                 | il pagamento presso   |
+|                       |                                                        | il Portale PSP è      |
+|                       |                                                        | stato eseguito con    |
+|                       |                                                        | successo;             |
+|                       |                                                        | quest’ultimo fornirà  |
+|                       |                                                        | a breve una RT        |
+|                       |                                                        | positiva              |
++-----------------------+--------------------------------------------------------+-----------------------+
+|                       | **ERROR**                                              | il pagamento presso   |
+|                       |                                                        | il Portale PSP non è  |
+|                       |                                                        | stato eseguito con    |
+|                       |                                                        | successo;             |
+|                       |                                                        | quest’ultimo ha       |
+|                       |                                                        | segnalato al Web-FESP |
+|                       |                                                        | l’esito negativo.     |
++-----------------------+--------------------------------------------------------+-----------------------+
+|                       | **DIFFERITO**                                          | l’esito del pagamento |
+|                       |                                                        | eseguito              |
+|                       |                                                        | dall’utilizzatore     |
+|                       |                                                        | finale presso il      |
+|                       |                                                        | Portale PSP sarà noto |
+|                       |                                                        | solo al ricevimento   |
+|                       |                                                        | della RT.             |
++-----------------------+--------------------------------------------------------+-----------------------+
+| **URLesitoPSP**       | è tutta la *query*                                     |                       |
+| (opzionale, a         | *string* dei parametri                                 |                       |
+| richiesta)            | passati dal Portale                                    |                       |
+|                       | PSP al Web-FESP senza                                  |                       |
+|                       | traduzione in                                          |                       |
+|                       | idSession ed esito.                                    |                       |
+|                       | Esempio per uno                                        |                       |
+|                       | specifico PSP:                                         |                       |
+|                       |                                                        |                       |
+|                       | "idBruciatura=abc1d4e7f3a8&idCarrello=123456789&codice |                       |
+|                       | Ritorno=KO_02"                                         |                       |
++-----------------------+--------------------------------------------------------+-----------------------+
 
 Interfacce HTTP per il servizio WISP
 ------------------------------------
@@ -3588,7 +3587,8 @@ indicati in Tabella 38.
 | terzoModelloPagamento   | an         | 1..1    | 2       | Indica se mostrare o meno i servizi dei PSP   |
 |                         |            |         |         | che consentono il pagamento attivato presso   |
 |                         |            |         |         | i PSP (cosiddetto modello 3,                  |
-|                         |            |         |         | cfr. § 2.2 delle SANP)                        |
+|                         |            |         |         | `cfr. § 2.2 <../15-Capitolo_8/Capitolo8.rst#  |
+|                         |            |         |         | ricezione-delle-rt-e-richiesta-di-copia>`_)   |
 +-------------------------+------------+---------+---------+-----------------------------------------------+
 | idPSP                   | an         | 0..1    | 35      | Identificativo del PSP, eventualmente         |
 |                         |            |         |         | selezionato dall'utente in sessioni           |
@@ -3875,7 +3875,9 @@ indicati in **Tabella 39**.
 |             |             |             |             | **IBAN,** qualora il parametro ibanAccredito sia   |
 |             |             |             |             | presente e il codice IBAN ivi specificato non sia  |
 |             |             |             |             | presente nella White List del NodoSPC              |
-|             |             |             |             | (cfr. § 4.2.3                                      |
+|             |             |             |             | (`cfr. § 4.2.3 <../09-Capitolo_4/Capitolo4.        |
+|             |             |             |             | rst#tabella-dei-cc-di-accredito>`_                 |
+|             |             |             |             |                                                    |
 +-------------+-------------+-------------+-------------+----------------------------------------------------+
 
 Re-direzione HTTP da WISP verso il Portale dell'Ente Creditore - urlReturn
