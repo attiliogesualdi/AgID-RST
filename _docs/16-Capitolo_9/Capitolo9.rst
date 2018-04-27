@@ -3398,8 +3398,8 @@ Tabella 42.
 |                       | mentre non deve essere presente nel caso di utilizzo della primitiva                   |
 |                       | **nodoInviaCarrelloRPT**.                                                              |
 +-----------------------+----------------------------------------------------------------------------------------+
-|**parametriPagamento** | *Query string* fornita dal PSP mediante la *Response* della primitiva invocata in      |
-|**Immediato**          | precedenza:                                                                            |
+|**parametriPagamento** |*Query string* fornita dal PSP mediante la *Response* della primitiva invocata in      |
+|**Immediato**          |precedenza:                                                                            |
 |                       |                                                                                        |
 |                       |                                                                                        |
 |                       |-  parametro **O-3** per **pspInviaRPT**                                                |
@@ -3408,8 +3408,8 @@ Tabella 42.
 |                       |-  parametro **O-3** per **pspInviaCarrelloRPT**                                        |
 |                       |   (`vedi § 9.2.1.2 <../16-Capitolo_9/Capitolo9.rst#pspinviacarrellorpt>`_).            |
 +-----------------------+----------------------------------------------------------------------------------------+
-| **idCarrello**        | parametro opzionale, presente nel caso sia restituito dal PSP nella *Response*         |
-| (opzionale)           | della primitiva invocata in precedenza:                                                |
+| **idCarrello**        |parametro opzionale, presente nel caso sia restituito dal PSP nella *Response*         |
+| (opzionale)           |della primitiva invocata in precedenza:                                                |
 |                       |                                                                                        |
 |                       |-  parametro **O-2** per **pspInviaRPT**                                                |
 |                       |   (`vedi § 9.2.1.1 <../16-Capitolo_9/Capitolo9.rst#pspinviarpt>`_)                     |
