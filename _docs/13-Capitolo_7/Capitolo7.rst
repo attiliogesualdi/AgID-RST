@@ -206,7 +206,7 @@ di comodo 0: in questo caso il PSP, che recepisce tale dato
 decodificando i codici grafici stampati sull’avviso, gestisce
 l’eccezione richiedendo all’utilizzatore finale l’importo da pagare e lo
 utilizza nell’invocazione delle primitive modello 3 (`vedi §§ 9.2.3.1 <../16-Capitolo_9/Capitolo9.rst#nodoverificarpt>`_ e
-9.2.3.2` <../16-Capitolo_9/Capitolo9.rst#nodoattivarpt>`_).
+`9.2.3.2 <../16-Capitolo_9/Capitolo9.rst#nodoattivarpt>`_).
 
 È compito dell’Ente Creditore recepire tale informazione e interagire di
 conseguenza con il proprio archivio dei pagamenti in attesa.
