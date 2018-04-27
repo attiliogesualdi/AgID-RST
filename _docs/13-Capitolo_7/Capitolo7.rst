@@ -129,33 +129,25 @@ possibili diversi strumenti messi a disposizioni dal PSP.
 Come indicato nel capitolo 2 dell’Allegato A alle Linee guida, il
 formato del **Numero Avviso** è il seguente:
 
-+-----------------------------------+-----------------------------------+
-| <aux digit (1n)>[<application     | (A) [2]_                          |
-| code> (2n)]<codice IUV (15|17n)>  |                                   |
-+===================================+===================================+
-| **aux digit**                     | Valore numerico che definisce la  |
-|                                   | struttura del codice IUV in       |
-|                                   | funzione del numero di punti di   |
-|                                   | generazione dello stesso;         |
-+-----------------------------------+-----------------------------------+
-| **application code**              | Valore numerico che serve ad      |
-|                                   | individuare la porzione           |
-|                                   | dell’archivio dei pagamenti in    |
-|                                   | attesa interessata                |
-|                                   | dall’operazione. Il dato è        |
-|                                   | presente o meno in funzione del   |
-|                                   | componente <aux digit>;           |
-+-----------------------------------+-----------------------------------+
-| **codice IUV**                    | Rappresenta l'identificativo      |
-|                                   | univoco di versamento, così come  |
-|                                   | definito nel paragrafo 7.1 delle  |
-|                                   | Linee guida. Ad un singolo        |
-|                                   | pagamento in attesa può essere    |
-|                                   | associato uno ed un solo codice   |
-|                                   | IUV, indipendentemente dai        |
-|                                   | possibili diversi strumenti messi |
-|                                   | a disposizioni dal PSP.           |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------------+--------------------------------------------------------+
+| <aux digit (1n)>[<application code> (2n)]<codice IUV (15|17n)> | (A) [2]_                                               |
++================================================================+========================================================+
+| **aux digit**                                                  | Valore numerico che definisce la struttura del codice  |
+|                                                                | IUV in funzione del numero di punti di generazione     |
+|                                                                | dello stesso;                                          |
++----------------------------------------------------------------+--------------------------------------------------------+
+| **application code**                                           | Valore numerico che serve ad individuare la porzione   |
+|                                                                | dell’archivio dei pagamenti in attesa interessata      |
+|                                                                | dall’operazione. Il dato è presente o meno in funzione |
+|                                                                | del componente <aux digit>;                            |
++----------------------------------------------------------------+--------------------------------------------------------+
+| **codice IUV**                                                 | Rappresenta l'identificativo univoco di versamento,    |
+|                                                                | così come definito nel paragrafo 7.1 delle Linee       |
+|                                                                | guida. Ad un singolo pagamento in attesa può essere    |
+|                                                                | associato uno ed un solo codice IUV, indipendentemente |
+|                                                                | dai possibili diversi strumenti messi a disposizioni   |
+|                                                                | dal PSP.                                               |
++----------------------------------------------------------------+--------------------------------------------------------+
 
 La componente <**application code>** identifica, quando presente, il
 singolo archivio di pagamenti in attesa che viene indirizzato mediante i
@@ -197,8 +189,9 @@ codici grafici (mono o bidimensionali) sono quelle indicate in Tabella
 +--------------------------+---------+------------+---------+---------+-----------------------------------------------------+
 | numeroAvviso             | 1       | n          | 1..1    | 8..18   | È il numero che l’Ente Creditore attribuisce        |
 |                          |         |            |         |         | all’avviso di pagamento. È composto secondo         |
-|                          |         |            |         |         | il formato indicato al                              |
-|                          |         |            |         |         | paragrafo 7.4.1                                     |
+|                          |         |            |         |         | il formato indicato al paragrafo                    |
+|                          |         |            |         |         | `7.4.1 <../13-Capitolo_7/Capitolo7.rst#il-numero-   |
+|                          |         |            |         |         | avviso-e-larchivio-dei-pagamenti-in-attesa>`_       |
 +--------------------------+---------+------------+---------+---------+-----------------------------------------------------+
 | importoVersamento        | 1       | an         | 1..1    | 3..12   | Campo numerico (due cifre per la parte decimale,    |
 |                          |         |            |         |         | il separatore dei centesimi è il punto “.”),        |
@@ -212,8 +205,8 @@ stampa dell’avviso, il dato importoVersamento sarà impostato al valore
 di comodo 0: in questo caso il PSP, che recepisce tale dato
 decodificando i codici grafici stampati sull’avviso, gestisce
 l’eccezione richiedendo all’utilizzatore finale l’importo da pagare e lo
-utilizza nell’invocazione delle primitive modello 3 (vedi §§ 9.2.3.1 e
-9.2.3.2).
+utilizza nell’invocazione delle primitive modello 3 (`vedi §§ 9.2.3.1 <../16-Capitolo_9/Capitolo9.rst#nodoverificarpt>`_ e
+9.2.3.2` <../16-Capitolo_9/Capitolo9.rst#nodoattivarpt>`_).
 
 È compito dell’Ente Creditore recepire tale informazione e interagire di
 conseguenza con il proprio archivio dei pagamenti in attesa.
