@@ -3345,7 +3345,7 @@ sono specificati nella Tabella 41.
 |                                   |invocata in precedenza:                                                                        |
 |                                   |                                                                                               |
 |                                   |-  parametro **O-2** per                                                                       |
-|                                   |       **pspInviaRPT** (`vedi § 9.2.1.1 <../16-Capitolo_9/Capitolo9.rst#pspinviarpt>`_)        |
+|                                   |   **pspInviaRPT** (`vedi § 9.2.1.1 <../16-Capitolo_9/Capitolo9.rst#pspinviarpt>`_)            |
 |                                   |                                                                                               |
 |                                   |-  parametro **O-2** per                                                                       |
 |                                   |   **pspInviaCarrelloRPT**                                                                     |
@@ -3402,20 +3402,20 @@ Tabella 42.
 |**Immediato**          | precedenza:                                                                            |
 |                       |                                                                                        |
 |                       |                                                                                        |
-|                       | -  parametro **O-3** per **pspInviaRPT**                                               |
-|                       |    (vedi §9.2.1.1)                                                                     |
+|                       |-  parametro **O-3** per **pspInviaRPT**                                                |
+|                       |   (`vedi § 9.2.1.1 <../16-Capitolo_9/Capitolo9.rst#pspinviarpt>`_)                     |
 |                       |                                                                                        |
-|                       | -  parametro **O-3** per **pspInviaCarrelloRPT**                                       |
-|                       |    (vedi §9.2.1.2).                                                                    |
+|                       |-  parametro **O-3** per **pspInviaCarrelloRPT**                                        |
+|                       |   (`vedi § 9.2.1.2 <../16-Capitolo_9/Capitolo9.rst#pspinviacarrellorpt>`_).            |
 +-----------------------+----------------------------------------------------------------------------------------+
 | **idCarrello**        | parametro opzionale, presente nel caso sia restituito dal PSP nella *Response*         |
 | (opzionale)           | della primitiva invocata in precedenza:                                                |
 |                       |                                                                                        |
-|                       | -  parametro **O-2** per **pspInviaRPT**                                               |
-|                       |    (vedi §9.2.1.1)                                                                     |
+|                       |-  parametro **O-2** per **pspInviaRPT**                                                |
+|                       |   (`vedi § 9.2.1.1 <../16-Capitolo_9/Capitolo9.rst#pspinviarpt>`_)                     |
 |                       |                                                                                        |
-|                       | -  parametro **O-2** per **pspInviaCarrelloRPT**                                       |
-|                       |    (vedi §9.2.1.2).                                                                    |
+|                       |-  parametro **O-2** per **pspInviaCarrelloRPT**                                        |
+|                       |   (`vedi § 9.2.1.2 <../16-Capitolo_9/Capitolo9.rst#pspinviacarrellorpt>`_).            |
 +-----------------------+----------------------------------------------------------------------------------------+
 | **codiceRitornoPSP**  | stringa contenente un parametro fornito dal PSP, il cui formato è lista di valori      |
 |                       | possibili sono concordati a priori dallo specifico PSP con il NodoSPC. Il significato  |
@@ -3521,7 +3521,8 @@ informazioni indicate in Tabella 43.
 |           |         |            |         |         | rende immodificabile da parte dell'utilizzatore         |
 |           |         |            |         |         | finale i dati dell'ordine.                              |
 |           |         |            |         |         |                                                         |
-|           |         |            |         |         | Per il calcolo vedi § 9.4.5.1                           |
+|           |         |            |         |         | Per il calcolo `vedi § 9.4.5.1 <../16-Capitolo_9/       |
+|           |         |            |         |         | Capitolo9.rst#mac-di-richiesta-pagamento>`_             |
 +-----------+---------+------------+---------+---------+---------------------------------------------------------+
 | DESCRORD  | 1       | an         | 1..1    | 25..140 | Descrizione dell'ordine, nonché causale del             |
 |           |         |            |         |         | pagamento.                                              |
@@ -3619,9 +3620,10 @@ informazioni di Tabella 44.
 +-----------+---------+------------+---------+---------+-------------------------------------------------+
 | MAC       | 1       | an         | 1..1    | 40      | Message Authentication Code:                    |
 |           |         |            |         |         | rende immodificabile da parte dell'utilizzatore |
-|           |         |            |         |         | finale i dati dell'esito.                       |
+|           |         |            |         |         | finale i dati dell'esito. Per il calcolo        |
 |           |         |            |         |         |                                                 |
-|           |         |            |         |         | Per il calcolo vedi § 9.4.5.2                   |
+|           |         |            |         |         | `vedi § 9.4.5.2 <../16-Capitolo_9/Capitolo9.    |
+|           |         |            |         |         | rst#mac-di-confermaesito-pagamento>`_           |
 +-----------+---------+------------+---------+---------+-------------------------------------------------+
 | ESITO     | 1       | n          | 1..1    | 2       | Codice che indica l’esito della transazione.    |
 |           |         |            |         |         | Vedi Tabella 45.                                |
@@ -3697,7 +3699,10 @@ autorizzazione ad esso legate.
 |            |         |            |         |         | rende immodificabile da parte                  |
 |            |         |            |         |         | dell'utilizzatore finale i dati dell'ordine.   |
 |            |         |            |         |         |                                                |
-|            |         |            |         |         | Per il calcolo vedi § 9.4.5.3                  |
+|            |         |            |         |         | Per il calcolo                                 |
+|            |         |            |         |         | `vedi § 9.4.5.3 <../16-Capitolo_9/Capitolo9.   |
+|            |         |            |         |         | rst#mac-di-richiesta-della-situazione-di-      |
+|            |         |            |         |         | un-ordine>`_                                   |
 +------------+---------+------------+---------+---------+------------------------------------------------+
 
 Il servizio restituisce una risposta in formato XML, con le
@@ -3722,7 +3727,8 @@ caratteristiche riportate in Tabella 47.
 | MAC                 | 2       | an         | 1..1    | 40      | Message Authentication Code:                     |
 |                     |         |            |         |         | rende immodificabile da parte dell'utilizzatore  |
 |                     |         |            |         |         | finale i dati dell'ordine. Per il calcolo        |
-|                     |         |            |         |         | vedi § 9.4.5.4                                   |
+|                     |         |            |         |         | `vedi § 9.4.5.4 <../16-Capitolo_9/Capitolo9.rst# |
+|                     |         |            |         |         | mac-di-risposta-della-situazione-di-un-ordine>`_ |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
 | Dati                | 2       | s          | 1..1    |         | Struttura che contiene i dati della richiesta    |
 |                     |         |            |         |         | di situazione ordine e del messaggio di          |
