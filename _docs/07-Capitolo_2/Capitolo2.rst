@@ -864,7 +864,7 @@ liberatoria, può essere utilizzata dall’utilizzatore finale per ottenere
 quietanza da parte dell’EC.
 
 Le copie analogiche prodotte dall’Ente Creditore o dai PSP devono
-necessariamente contenere, oltre al logo del sistema pagoPA (`cfr. § 11.5 <../19-Capitolo_11/Capitolo11.rst#utilizzo-del-marchio-pagopa>`_ almeno le seguenti informazioni, per il cui contenuto si rimanda al `capitolo 5 ella Sezione II <../11-Capitolo_5/Capitolo5.rst>`_:
+necessariamente contenere, oltre al logo del sistema pagoPA (`cfr. § 11.5 <../19-Capitolo_11/Capitolo11.rst#utilizzo-del-marchio-pagopa>`_) [2]_ almeno le seguenti informazioni, per il cui contenuto si rimanda al `capitolo 5 ella Sezione II <../11-Capitolo_5/Capitolo5.rst>`_:
 
 a) Data dell’operazione
 
