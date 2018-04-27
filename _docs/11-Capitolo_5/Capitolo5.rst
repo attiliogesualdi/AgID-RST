@@ -433,7 +433,9 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | eseguita                                  |
 |                         |         |            |         |         |                 | sui conti di tesoreria.,Si faccia         |
 |                         |         |            |         |         |                 | riferimento al capitolo                   |
-|                         |         |            |         |         |                 | 7.1 della presente Sezione.               |
+|                         |         |            |         |         |                 | `7.1 della presente Sezione. <../13-      |
+|                         |         |            |         |         |                 | Capitolo_7/Capitolo7.rst#identificativo   |
+|                         |         |            |         |         |                 | -univoco-versamento>`_                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | CodiceContesto          | 2       | an         |         | 1..35   | Message         | Codice univoco necessario a               |
 | Pagamento               |         |            |         |         | Identification  | definire il                               |
