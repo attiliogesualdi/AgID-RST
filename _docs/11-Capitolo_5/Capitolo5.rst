@@ -575,8 +575,11 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | nell’elemento                             |
 |                         |         |            |         |         |                 | ibanAccredito.                            |
 |                         |         |            |         |         |                 | Per indicazioni circa                     |
-|                         |         |            |         |         |                 | l’utilizzo vedi il,                       |
-|                         |         |            |         |         |                 | paragrafo 8.1.1.5.                        |
+|                         |         |            |         |         |                 | l’utilizzo vedi il, paragrafo             |
+|                         |         |            |         |         |                 | `8.1.1.5 <../15-Capitolo_8/Capitolo8.     |
+|                         |         |            |         |         |                 | rst#avvertenze-per-la-predisposizione-e-  |
+|                         |         |            |         |         |                 | linvio-delle-richieste-di-pagamento-      |
+|                         |         |            |         |         |                 | telematiche>`__                           |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | bicAppoggio             | 3       | an         |         | 8 / 11  | Creditor        | Bank Identifier Code                      |
 |                         |         |            |         |         | Agent           | definito secondo lo standard              |
