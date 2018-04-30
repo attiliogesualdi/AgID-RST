@@ -1327,23 +1327,23 @@ H-1. intestazionePPT
 
 **Parametri di input**
 
-I-5. password                                                           
-I-6. identificativoPSP: per permettere di specificare il PSP     
-I-7. identificativoIntermediarioPSP                                     
-I-8. identificativoCanale: per permettere di specificare il percorso verso il PSP   
-I-9. tipoFirma: **parametro deprecato**                                 
-I-10. RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
+I-5  password                                                           
+I-6  identificativoPSP: per permettere di specificare il PSP     
+I-7  identificativoIntermediarioPSP                                     
+I-8  identificativoCanale: per permettere di specificare il percorso verso il PSP   
+I-9  tipoFirma: **parametro deprecato**                                 
+I-10 RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
 
 **Parametri di output**
 
 O-1. esito: OK oppure KO
 
 O-2. Redirect: valori ammessi 0 | 1; specifica se il pagamento prescelto
-   dall'utente prevede la re-direzione dell’utilizzatore finale
+     dall'utente prevede la re-direzione dell’utilizzatore finale
 
 O-3. URL: a cui re-dirigere il browser dell’utilizzatore finale,
-   contenente anche una *query string* “idSession=<idSession>” che
-   identifica univocamente l’operazione di pagamento
+     contenente anche una *query string* “idSession=<idSession>” che
+     identifica univocamente l’operazione di pagamento
 
 **Gestione degli errori**
 
