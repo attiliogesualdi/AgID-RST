@@ -643,21 +643,21 @@ Nel caso in cui l’EC non utilizzi la funzione di “emulatore” oppure il
 proprio software non sia *compliant* con la versione 1.3 del WISP, lo
 stesso ente dovrà:
 
-a) codificare nell’elemento tipoVersamento della struttura
-   datiVersamento della RPT il valore fisso **BBT**  [2]_
+- a) codificare nell’elemento tipoVersamento della struttura
+     datiVersamento della RPT il valore fisso **BBT**  [2]_
 
-b) usare la primitiva **nodoInviaCarrelloRPT** (in una prima fase è
-   ammessa anche la primitiva deprecata **nodoInviaRPT**) ed
-   impostare con i valori appresso indicati i seguenti parametri
-   fissi:
+- b) usare la primitiva **nodoInviaCarrelloRPT** (in una prima fase è
+     ammessa anche la primitiva deprecata **nodoInviaRPT**) ed
+     impostare con i valori appresso indicati i seguenti parametri
+     fissi:
 
-+-----------------------------------+--------------------+
-| 2. identificativoPSP              | **AGID_01**        |
-+-----------------------------------+--------------------+
-| 3. identificativoIntermediarioPSP | **97735020584**    |
-+-----------------------------------+--------------------+
-| 4. identificativoCanale           | **97735020584_02** |
-+-----------------------------------+--------------------+
++-------------------------------------+--------------------+
+| I-2. identificativoPSP              | **AGID_01**        |
++-------------------------------------+--------------------+
+| I-3. identificativoIntermediarioPSP | **97735020584**    |
++-------------------------------------+--------------------+
+| I-4. identificativoCanale           | **97735020584_02** |
++-------------------------------------+--------------------+
 
 Casi di errore e strategie di ripristino per l’Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1247,7 +1247,7 @@ all'elemento faultBean.description, si precisa che, nel caso in cui il
 faultCode sia uguale a:
 
 -  *PPT_CANALE_ERRORE*, il campo è valorizzato con il contenuto del
-       **faultBean** generato dal PSP, convertito in formato stringa;
+   **faultBean** generato dal PSP, convertito in formato stringa;
 
 -  *CANALE_SEMANTICA*, l'Ente Creditore dovrà indicare lo specifico
    errore legato all'elaborazione dell'oggetto ricevuto.
