@@ -1440,11 +1440,11 @@ relativo all’intero “carrello”.
 
 H-1. intestazioneCarrelloPPT:
 
-   - a. identificativoCarrello
+- a. identificativoCarrello
 
-   - b. identificativoIntermediarioPA
+- b. identificativoIntermediarioPA
 
-   - c. identificativoStazioneIntermediarioPA
+- c. identificativoStazioneIntermediarioPA
 
 **Parametri di input**
 
@@ -1458,15 +1458,15 @@ I-4. identificativoCanale
 
 I-5. listaRPT: array di:
 
-   - a. idDominio
+- a. idDominio
 
-   - b. identificativoUnivocoVersamento
+- b. identificativoUnivocoVersamento
 
-   - c. codiceContestoPagamento
+- c. codiceContestoPagamento
 
-   - d. tipoFirma: **parametro deprecato**
+- d. tipoFirma: **parametro deprecato**
 
-   - e. RPT: file XML in formato base64 binary (vedi Tabella 1)
+- e. RPT: file XML in formato base64 binary (vedi Tabella 1)
 
 **Parametri di output**
 
@@ -1596,18 +1596,18 @@ storia, da quando è stata ricevuta dal Nodo dei Pagamenti-SPC.
 
 Ogni elemento della lista è costituito da:
 
-   -a. data: relativa allo stato
+-a. data: relativa allo stato
 
-   - b. stato: stato della RPT (vedi Tabella 35 a pagina 143)
+- b. stato: stato della RPT (vedi Tabella 35 a pagina 143)
 
-   - c. descrizione: dello stato
+- c. descrizione: dello stato
 
-   - d. versamentiLista: struttura contenente una lista di elementi che
-        identificano i vari stati che ogni singolo versamento contenuto nella
-        RPT ha assunto durante la sua storia, da quando è stata ricevuta dal
-        Nodo dei Pagamenti-SPC
-        Gli stati possono variare in base allo specifico PSP/Canale utilizzato.
-        Ogni elemento della lista è costituito da:
+- d. versamentiLista: struttura contenente una lista di elementi che
+     identificano i vari stati che ogni singolo versamento contenuto nella
+     RPT ha assunto durante la sua storia, da quando è stata ricevuta dal
+     Nodo dei Pagamenti-SPC
+     Gli stati possono variare in base allo specifico PSP/Canale utilizzato.
+     Ogni elemento della lista è costituito da:
 
 1. progressivo: numero del versamento contenuto nella RPT
 
@@ -1769,9 +1769,9 @@ I-4. identificativoDominio (opzionale)
 
 I-5. Range temporale:
 
-   - a. rangeDa
+- a. rangeDa
 
-   - b. rangeA
+- b. rangeA
 
 I-6. dimensioneLista: numero massimo di elementi da restituire (intero
    numerico)
@@ -1782,13 +1782,13 @@ O-1. totRestituiti: numero di occorrenze di rptPendente restituite
 
 O-2. rptPendente: array di
 
-   - a. identificativoDominio
+- a. identificativoDominio
 
-   - b. identificativoUnivocoVersamento
+- b. identificativoUnivocoVersamento
 
-   - c. codiceContestoPagamento
+- c. codiceContestoPagamento
 
-   - d. stato: stato della RPT (vedi Tabella 35 a pagina 143)
+- d. stato: stato della RPT (vedi Tabella 35 a pagina 143)
 
 **Gestione degli errori**
 
@@ -1958,15 +1958,15 @@ accettata oppure respinta con errore.
 
 H-1. intestazionePPT
 
-   - a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-   - b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-   - c. identificativoDominio
+- c. identificativoDominio
 
-   - d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-   - e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
@@ -2146,15 +2146,15 @@ dei Pagamenti-SPC, che a sua volta la restituisce al PSP.
 
 H-1. intestazionePPT
 
-   - a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-   - b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-   - c. identificativoDominio
+- c. identificativoDominio
 
-   - d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-   - e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
@@ -2166,18 +2166,18 @@ O-1. esito: OK oppure KO
 
 O-2. datiPagamentoPA: parametro a sua volta composto da:
 
-   - a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   - b. ibanAccredito: contiene l’IBAN del conto da accreditare (obbligatorio)
+- b. ibanAccredito: contiene l’IBAN del conto da accreditare (obbligatorio)
 
-   - c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   - d. ente Beneficiario (opzionale): raggruppa dati anagrafici
+- d. ente Beneficiario (opzionale): raggruppa dati anagrafici
 
-   - e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   - f. causaleVersamento: il formato della causale di versamento deve
-        essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 
 **Gestione degli errori**
@@ -2249,15 +2249,15 @@ successo produrrà una segnalazione di errore per duplicazione.
 
 H-1. intestazionePPT
 
-   - a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-   - b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-   - c. identificativoDominio
+- c. identificativoDominio
 
-   - d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-   - e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
@@ -2265,19 +2265,19 @@ I-1. identificativoPSP
 
 I-2. datiPagamentoPSP: parametro a sua volta composto da:
 
-   - a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   - b. ibanAppoggio (opzionale)
+- b. ibanAppoggio (opzionale)
 
-   - c. bicAppoggio (opzionale)
+- c. bicAppoggio (opzionale)
 
-   - d. soggettoVersante (opzionale): raggruppa dati anagrafici
+- d. soggettoVersante (opzionale): raggruppa dati anagrafici
 
-   - e. ibanAddebito (opzionale)
+- e. ibanAddebito (opzionale)
 
-   - f. bicAddebito (opzionale)
+- f. bicAddebito (opzionale)
 
-   - g. soggettoPagatore (opzionale): raggruppa dati anagrafici
+- g. soggettoPagatore (opzionale): raggruppa dati anagrafici
 
 I-3. identificativoIntermediarioPSP: contiene l'identificativo dello 
 specifico intermediario del PSP che deve essere utilizzato nella
@@ -2294,20 +2294,20 @@ O-1. esito: OK oppure KO
 
 O-2. datiPagamentoPA: parametro a sua volta composto da:
 
-   - a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   - b. ibanAccredito: contiene l’IBAN del conto da accreditare
-        (obbligatorio), deve essere lo stesso utilizzato nella
-        *response* della primitiva **paaVerificaRPT** (parametro O-2, b)
+- b. ibanAccredito: contiene l’IBAN del conto da accreditare
+     (obbligatorio), deve essere lo stesso utilizzato nella
+     *response* della primitiva **paaVerificaRPT** (parametro O-2, b)
 
-   - c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   - d. enteBeneficiario (opzionale): raggruppa dati anagrafici
+- d. enteBeneficiario (opzionale): raggruppa dati anagrafici
 
-   - e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   - f. causaleVersamento: il formato della causale di versamento deve
-        essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 
 **Gestione degli errori**
@@ -2359,15 +2359,15 @@ stesso e allegarla nella *response* preparata dall'EC stesso.
 
 H-1. intestazionePPT
 
-   - a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-   - b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-   - c. identificativoDominio
+- c. identificativoDominio
 
-   - d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-   - e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
@@ -2375,19 +2375,19 @@ I-1. identificativoPSP
 
 I-2. datiPagamentoPSP: parametro a sua volta composto da:
 
-   - a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   - b. ibanAppoggio (opzionale)
+- b. ibanAppoggio (opzionale)
 
-   - c. bicAppoggio (opzionale)
+- c. bicAppoggio (opzionale)
 
-   - d. soggettoVersante (opzionale): raggruppa dati anagrafici
+- d. soggettoVersante (opzionale): raggruppa dati anagrafici
 
-   - e. ibanAddebito (opzionale)
+- e. ibanAddebito (opzionale)
 
-   - f. bicAddebito (opzionale)
+- f. bicAddebito (opzionale)
 
-   - g. soggettoPagatore (opzionale): raggruppa dati anagrafici
+- g. soggettoPagatore (opzionale): raggruppa dati anagrafici
 
 **Parametri di output**
 
@@ -2395,11 +2395,11 @@ O-1. esito: OK oppure KO
 
 O-2. datiPagamentoPA: parametro a sua volta composto da:
 
-   - a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   - b. ibanAccredito: contiene l’IBAN del conto da
+- b. ibanAccredito: contiene l’IBAN del conto da
 
-   - c. causaleVersamento: il formato della causale di versamento deve
+- c. causaleVersamento: il formato della causale di versamento deve
         essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 O-3. RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
@@ -2476,18 +2476,18 @@ O-2. numeroAvviso: contiene il Numero Avviso secondo la struttura di cui
 
 O-3. datiPagamentoPA: parametro a sua volta composto da
 
-   - a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   - b. ibanAccredito
+- b. ibanAccredito
 
-   - c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   - d. ente Beneficiario (opzionale): raggruppa dati anagrafici
+- d. ente Beneficiario (opzionale): raggruppa dati anagrafici
 
-   - e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   - f. causaleVersamento: il formato della causale di versamento deve
-        essere conforme a quanto indicato al `§ 7.4.5 delle SANP <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 delle SANP <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 **Gestione degli errori**
 
@@ -2740,15 +2740,15 @@ Creditore ed è utilizzata per la ricezione dell’esito dello storno (ER).
 
 H-1. intestazionePPT
 
-   - a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-   - b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-   - c. identificativoDominio
+- c. identificativoDominio
 
-   - d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-   - e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
@@ -2835,9 +2835,9 @@ O-1. totRestituiti
 
 O-2. idRendicontazione: elenco dei flussi di rendicontazione, array di:
 
-   - a. identificativoFlusso
+- a. identificativoFlusso
 
-   - b. dataOraFlusso
+- b. dataOraFlusso
 
 **Gestione degli errori**
 
@@ -2988,11 +2988,11 @@ dell'avviso all'Ente Creditore.
 
 H-1. intestazionePPT
 
-   - a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-   - b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-   - c. identificativoDominio
+- c. identificativoDominio
 
 **Parametri di input**
 
@@ -3076,11 +3076,11 @@ qualora lo ritenga opportuno.
 
 H-1. intestazionePPT
 
-   - a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-   - b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-   - c. identificativoDominio
+- c. identificativoDominio
 
 **Parametri di input**
 
@@ -3095,9 +3095,9 @@ I-3. codiceServizio (opzionale): contiene il codice (5 cifre numeriche)
 I-4. periodoRiferimento (opzionale): periodo temporale rispetto al quale
      si vuole restringere la ricerca, è formato da:
 
-   - a. annoDA: anno di competenza del debito nel formato YYYY
+- a. annoDA: anno di competenza del debito nel formato YYYY
 
-   - b. annoA: anno di competenza del debito nel formato YYYY
+- b. annoA: anno di competenza del debito nel formato YYYY
 
 **Parametri di output**
 
@@ -3270,9 +3270,9 @@ O-1. totRestituiti
 
 O-2. idQuadratura: elenco dei flussi "Totali di Traffico", array di:
 
-   - a. identificativoFlusso
+- a. identificativoFlusso
 
-   - b. dataOraFlusso
+- b. dataOraFlusso
 
 **Gestione degli errori**
 
