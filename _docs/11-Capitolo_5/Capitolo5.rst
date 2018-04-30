@@ -1484,7 +1484,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | cui è attiva l'erogazione dello specifico   |
 |                            |         |            |         |         | servizio da parte dell’Ente Creditore       |
 |                            |         |            |         |         | nel formato ISO 8601:                       |
-|                            |         |            |         |         | [YYYY]-[MM]-[DD]                            |
+|                            |         |            |         |         | **[YYYY]-[MM]-[DD]**                        |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | avvisaturaPull             | 2       | n          | 0..1    | 1       | Indica                                      |
 |                            |         |            |         |         | che l’Ente Creditore consente di attivare   |
@@ -1550,12 +1550,12 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 | fasciaOrariaDa             | 5       | an         | 0..1    | 8       | Orario di inizio disponibilità              |
 |                            |         |            |         |         | nell’ambito del                             |
 |                            |         |            |         |         | giorno nel formato                          |
-|                            |         |            |         |         | [hh]:[mm]:[ss].                             |
+|                            |         |            |         |         | **[hh]:[mm]:[ss].**                         |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | fasciaOrariaA              | 5       | an         | 0..1    | 8       | Orario di fine disponibilità                |
 |                            |         |            |         |         | nell’ambito del giorno nel                  |
 |                            |         |            |         |         | formato                                     |
-|                            |         |            |         |         | [hh]:[mm]:[ss].                             |
+|                            |         |            |         |         | **[hh]:[mm]:[ss].**                         |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | indisponibilita            | 3       | s          | 0..n    |         | Aggregazione relativa al                    |
 |                            |         |            |         |         | giorno della settimana,                     |
@@ -1689,11 +1689,9 @@ in Tabella 7.
 |                        |         |            |         |         | il-psp>`_)                                  |
 |                        |         |            |         |         | può assumere i seguenti valori:             |
 |                        |         |            |         |         |                                             |
-|                        |         |            |         |         | - **0** NON consente i                      |
-|                        |         |            |         |         | pagamenti c/o i PSP                         |
+|                        |         |            |         |         | - **0 NON consente i pagamenti c/o i PSP**  |
 |                        |         |            |         |         |                                             |
-|                        |         |            |         |         | - **1** CONSENTE i                          |
-|                        |         |            |         |         | agamenti c/o i PSP                          |
+|                        |         |            |         |         | - **1 CONSENTE i agamenti c/o i PSP**       |
 +------------------------+---------+------------+---------+---------+---------------------------------------------+
 | erogazioneServizio     | 2       | s          | 0..1    |         | Aggregazione relativa alle fasce orarie di  |
 |                        |         |            |         |         | erogazione del servizio da parte dell’Ente  |
@@ -2819,7 +2817,7 @@ gli elementi componenti il messaggio stesso, ora indicati nella Tabella
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+
 | mittenteACK                            | 1       | an         | 1..1    | 1..25   | Data e ora di generazione del messaggio        |
 |                                        |         |            |         |         | di ACK secondo il formato ISO 8601             |
-|                                        |         |            |         |         | [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]                |
+|                                        |         |            |         |         | **[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]**            |
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+
 | datiMessaggioReferenziato              | 1       | s          | 1..1    |         | Mittente del messaggio di ACK                  |
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+
