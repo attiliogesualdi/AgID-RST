@@ -102,7 +102,7 @@ a) l'archivio dei pagamenti in attesa (APA), contenente tutte le
    effettuare il pagamento;
 
 b) un’applicazione “*server*” dedicata necessaria per trattare le
-       richieste provenienti dai PSP;
+   richieste provenienti dai PSP;
 
 Il *workflow* di questo modello di pagamento è dettagliatamente
 analizzato nel presente paragrafo e in quelli successivi. A tal
