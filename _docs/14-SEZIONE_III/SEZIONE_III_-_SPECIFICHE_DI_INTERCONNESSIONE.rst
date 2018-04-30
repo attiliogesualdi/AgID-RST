@@ -148,8 +148,7 @@ aderenti.
 |                                 | dall'Ente Creditore.             |                                     |
 +---------------------------------+----------------------------------+-------------------------------------+
 
-
-FINE DOCUMENTO
+`Torna all'indice <../../index.rst>`__
 
 .. [1]
    in alcuni documenti degli Enti Creditori indicato anche come CRS.
