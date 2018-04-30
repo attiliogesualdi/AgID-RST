@@ -1313,35 +1313,35 @@ costituito da un'unica e sola RPT.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
-d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
-5. password                                                           
-6. identificativoPSP: per permettere di specificare il PSP     
-7. identificativoIntermediarioPSP                                     
-8. identificativoCanale: per permettere di specificare il percorso verso il PSP   
-9. tipoFirma: **parametro deprecato**                                 
-10. RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
+I-5. password                                                           
+I-6. identificativoPSP: per permettere di specificare il PSP     
+I-7. identificativoIntermediarioPSP                                     
+I-8. identificativoCanale: per permettere di specificare il percorso verso il PSP   
+I-9. tipoFirma: **parametro deprecato**                                 
+I-10. RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-2. Redirect: valori ammessi 0 | 1; specifica se il pagamento prescelto
+O-2. Redirect: valori ammessi 0 | 1; specifica se il pagamento prescelto
    dall'utente prevede la re-direzione dell’utilizzatore finale
 
-3. URL: a cui re-dirigere il browser dell’utilizzatore finale,
+O-3. URL: a cui re-dirigere il browser dell’utilizzatore finale,
    contenente anche una *query string* “idSession=<idSession>” che
    identifica univocamente l’operazione di pagamento
 
@@ -1352,11 +1352,11 @@ in caso di errore: **faultBean** emesso dal **NodoSPC**.
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-1. faultBean.id = <identificativoPSP>:
+1. **faultBean.id = <identificativoPSP>:**
 
 *PPT_CANALE_ERRORE* (vedi contenuto dato faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`__)
 
-2. faultBean.id = “NodoDeiPagamentiSPC”:
+2. **faultBean.id = “NodoDeiPagamentiSPC”:**
 
 *PPT_SINTASSI_XSD*
 
