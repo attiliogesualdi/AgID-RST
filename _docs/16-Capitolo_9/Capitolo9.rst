@@ -1119,12 +1119,12 @@ rappresentati nel diagramma di Figura 56:
      definito dall’apposito XSD;
 
 - d. **pspChiediAvanzamentoRPT**, con il quale il Nodo dei Pagamenti-SPC
-   interroga il PSP sullo stato di avanzamento della RPT. Il PSP
-   risponderà in modo sincrono fornendo l’elenco degli eventi
-   intercorsi. Dove previsto, potranno essere restituiti anche gli
-   avanzamenti dei singoli pagamenti generati dalla RPT di riferimento
-   ed eventuali altri segnali destinati all’ordinante e/o al
-   beneficiario.
+     interroga il PSP sullo stato di avanzamento della RPT. Il PSP
+     risponderà in modo sincrono fornendo l’elenco degli eventi
+     intercorsi. Dove previsto, potranno essere restituiti anche gli
+     avanzamenti dei singoli pagamenti generati dalla RPT di riferimento
+     ed eventuali altri segnali destinati all’ordinante e/o al
+     beneficiario.
 
 Questa interfaccia *Web service* definisce i meccanismi di comunicazione
 tra il Nodo dei Pagamenti-SPC e i PSP, pone l'onere di avviare le
@@ -3177,13 +3177,13 @@ I-5. identificativo Dominio (opzionale)
 
 O-1. listaQuadrature: costituita da:
 
-   a. totRestituiti
+- a. totRestituiti
 
-   b. idQuadratura: array di:
+- b. idQuadratura: array di:
 
-      1. identificativoFlusso
+     b1. identificativoFlusso
 
-      2. dataOraFlusso
+     b2. dataOraFlusso
 
 oppure, in caso di errore: **faultBean** emesso dal **NodoSPC** (dove
 faultBean.id è uguale a “NodoDeiPagamentiSPC”).
