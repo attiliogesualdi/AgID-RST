@@ -110,7 +110,7 @@ elencandone i codici previsti dalle azioni (nel seguito "primitive"
 delle diverse interfacce), ciascuno con la descrizione sintetica
 dell'errore o dell'informazione associata.
 
-Identificazione degli oggetti scambiati nel sistema pagoPA
+**IDENTIFICAZIONE DEGLI OGGETTI SCAMBIATI NEL SISTEMA PAGOPA**	
 
 Gli oggetti legati all'esecuzione dei pagamenti scambiati nel sistema
 [Richiesta di Pagamento Telematico (RPT), Ricevuta Telematica (RT),
@@ -137,6 +137,7 @@ aderenti.
 
 +---------------------------------+----------------------------------+-----------------------------------+
 |             **Dato**            | **Pagamenti attivati presso EC** | **Pagamenti attivati presso PSP** |
+|                                 |                                  |                                   |
 |                                 | **(modello 1 e modello 2)**      | **(modello 3 e modello 4)**       |
 +---------------------------------+----------------------------------+-----------------------------------+
 | identificativoDominio           | Campo alfanumerico contenente il codice fiscale dell'Ente Creditore. |
