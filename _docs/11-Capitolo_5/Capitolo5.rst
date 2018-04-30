@@ -1436,7 +1436,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 | dataInizioValidita         | 2       | an         | 1..1    | 10      | Data in cui inizia la validità              |
 |                            |         |            |         |         | delle informazioni relative                 |
 |                            |         |            |         |         | all’Ente Creditore nel                      |
-|                            |         |            |         |         | formato ISO 8601: [YYYY]-[MM]-[DD]          |
+|                            |         |            |         |         | formato ISO 8601: **[YYYY]-[MM]-[DD]**      |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | pagamentiPressoPSP         | 2       | n          | 1..1    | 1       | Indica se l’Ente Creditore                  |
 |                            |         |            |         |         | consente i pagamenti                        |
@@ -1446,11 +1446,9 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | il-psp>`_)                                  |
 |                            |         |            |         |         | può assumere i seguenti valori:             |
 |                            |         |            |         |         |                                             |
-|                            |         |            |         |         | - **0** NON consente i                      |
-|                            |         |            |         |         | pagamenti c/o i PSP                         |
+|                            |         |            |         |         | - **0 NON consente i pagamenti c/o i PSP**  |
 |                            |         |            |         |         |                                             |
-|                            |         |            |         |         | - **1** CONSENTE i                          |
-|                            |         |            |         |         | pagamenti c/o i PSP                         |
+|                            |         |            |         |         | - **1 CONSENTE i agamenti c/o i PSP**       |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | contactCenterEnteCreditore | 2       | an         | 1..1    | 255     | Recapiti dell'Ente Creditore                |
 |                            |         |            |         |         | (Numero telefonico e/o                      |
