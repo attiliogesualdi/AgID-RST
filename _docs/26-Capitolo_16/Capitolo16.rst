@@ -21,14 +21,14 @@ Nel grafico di Figura 66 sono rappresentati, nel lessico del servizio
 MyBank, i vari attori che interagiscono nel processo per consentire
 all’utilizzatore finale di effettuare il pagamento:
 
-a) *Buyer Bank*: è il PSP dell’utilizzatore finale, deve risultare aderente al NodoSPC;
+A) *Buyer Bank*: è il PSP dell’utilizzatore finale, deve risultare aderente al NodoSPC;
 
-b) *Seller Bank*: è il PSP dell’Ente Creditore, deve risultare aderente al NodoSPC;
+B) *Seller Bank*: è il PSP dell’Ente Creditore, deve risultare aderente al NodoSPC;
 
-c) *Collective Seller*: è l’AgID che mette a disposizione dei PSP che propongono il servizio MyBank le funzionalità del Nodo dei
+C) *Collective Seller*: è l’AgID che mette a disposizione dei PSP che propongono il servizio MyBank le funzionalità del Nodo dei
    Pagamenti-SPC;
 
-d) *Sub-Seller*: è l’Ente Creditore che, attraverso il Nodo dei Pagamenti-SPC, consente ai propri utenti di utilizzare il servizio
+D) *Sub-Seller*: è l’Ente Creditore che, attraverso il Nodo dei Pagamenti-SPC, consente ai propri utenti di utilizzare il servizio
    MyBank proposto dal PSP dell’utente stesso.
 
 Relazioni tra i soggetti
